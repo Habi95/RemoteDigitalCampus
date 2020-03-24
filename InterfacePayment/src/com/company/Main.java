@@ -8,6 +8,8 @@ public class Main {
         boolean running = true;
         Scanner scanner = new Scanner(System.in);
         String input;
+        Rectangle rectangle = new Rectangle(5,8);
+        Square square = new Square(5,5);
 
         Customer hans = new Customer("Hans", "Petersoon", 500.36,24);
 
@@ -32,11 +34,16 @@ public class Main {
 //        audi.goFillUpTheFuel(ggogh);
 
        while (running == true) {
+
+           rectangle.draw();
+           System.out.println("\n");
+           square.draw();
            System.out.println("\nDo you want to DRIVE your car or go SHOPPING @trashShop?");
            input = scanner.next();
            if (input.equalsIgnoreCase("shopping")) {
                PlayGoShopping goShopping = new PlayGoShopping(hans,trashShop);
            } else if (input.equalsIgnoreCase("Drive")){
+
                     PlayDriveCar goDrive = new PlayDriveCar(audi,ggogh);
 
            }
