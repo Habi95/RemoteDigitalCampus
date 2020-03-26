@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public abstract class MotherShop implements IShop{
@@ -13,6 +14,7 @@ public abstract class MotherShop implements IShop{
     double superMarketCashStock;
     double superMarketCashInFront;
     double [] price = new double[20];
+    ArrayList<Double> prices = new ArrayList<>();
     int storeCounter = 0;
     int counter = 0;
     int choiceOf;
@@ -20,6 +22,7 @@ public abstract class MotherShop implements IShop{
     DecimalFormat df = new DecimalFormat("#.##");
     File bill = new File("C:\\Users\\DCV\\Desktop\\HelloWorld\\RemoteDigitalCampus\\CarBsp.text");
     FileWriter mywriter = new FileWriter(bill,true);
+    int whichIndex;
 
     public MotherShop(String shopname, Person owner, double superMarketWealth) throws IOException {
         this.shopeName = shopname;
@@ -54,31 +57,31 @@ public abstract class MotherShop implements IShop{
         if (choiceOfPayment.equalsIgnoreCase("Kreditcard")){
             System.out.println(custom.kreditCard.typOfPayment);
             custom.kreditCard.soundOfPayment();
-            custom.kreditCard.paymentOutput(price[choiceOf]);
-            this.superMarketCashInFront =+ price[choiceOf];
+            custom.kreditCard.paymentOutput(prices.get(this.whichIndex));
+            this.superMarketCashInFront =+ prices.get(this.whichIndex);
             custom.kreditbalance =  custom.kreditbalance + custom.kreditCard.getBalace();
 
 
         } else if (choiceOfPayment.equalsIgnoreCase("Bill")) {
             System.out.println(custom.saleOnAccount.typOfPayment);
             custom.saleOnAccount.soundOfPayment();
-            custom.saleOnAccount.paymentOutput(price[choiceOf]);
-            this.superMarketCashInFront =+ price[choiceOf];
+            custom.saleOnAccount.paymentOutput(prices.get(this.whichIndex));
+            this.superMarketCashInFront =+ prices.get(this.whichIndex);
             custom.saleOnAccountBalance =+ custom.saleOnAccount.getBalace();
 
         } else if (choiceOfPayment.equalsIgnoreCase("Bankomatcard")) {
             System.out.println(custom.bankomatCard.typOfPayment);
             custom.bankomatCard.soundOfPayment();
-            custom.bankomatCard.paymentOutput(price[choiceOf]);
-            this.superMarketCashInFront =+ price[choiceOf];
+            custom.bankomatCard.paymentOutput(prices.get(this.whichIndex));
+            this.superMarketCashInFront =+ prices.get(this.whichIndex);
             custom.balance =  custom.balance + custom.bankomatCard.getBalace();
 
         } else if (choiceOfPayment.equalsIgnoreCase("Bar")) {
             custom.bar.balace += custom.moneyPouch;
             System.out.println(custom.bar.typOfPayment);
             custom.bar.soundOfPayment();
-            custom.bar.paymentOutput(price[choiceOf]);
-            this.superMarketCashInFront =+ price[choiceOf];
+            custom.bar.paymentOutput(prices.get(this.whichIndex));
+            this.superMarketCashInFront =+ prices.get(this.whichIndex);
             custom.moneyPouch = custom.bar.getBalace();
 
         }

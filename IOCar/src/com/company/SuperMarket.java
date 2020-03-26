@@ -1,11 +1,14 @@
 package com.company;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class SuperMarket extends MotherShop {
 
     String[] items = new String[20];
+    ArrayList<String> item = new ArrayList<>();
 
     public SuperMarket(String shopname, Person owner, double superMarketWealth) throws IOException {
         super(shopname, owner, superMarketWealth);
@@ -24,7 +27,7 @@ public class SuperMarket extends MotherShop {
         String choiceToBuy = scanner.nextLine();
         searchInArray(choiceToBuy);
         this.owner.conversationToPay(custom) ;
-        System.out.print(price[choiceOf] + "€ \n");
+        System.out.print(prices.get(this.whichIndex) + "€ \n");
 
         typeToPay(custom);
         this.owner.thankSo(custom);
@@ -32,57 +35,86 @@ public class SuperMarket extends MotherShop {
         mywriter.write("\n" + custom.name +" "+ custom.lastName + " " + choiceToBuy + " " + price[choiceOf] + "€"  );
         mywriter.close();
     }
+    @Override
+    public void searchInArray(String choiceToBuy) {
 
+
+
+        if (item.stream().anyMatch((singleString) -> singleString.equalsIgnoreCase(choiceToBuy))){
+                Optional<String> myItem = item.stream().filter((n) -> n.equalsIgnoreCase(choiceToBuy)).findFirst();
+                 this.whichIndex = item.indexOf(myItem.get());
+                System.out.println(item.get(this.whichIndex) + " " +  prices.get(this.whichIndex));
+            }
+
+
+
+//        for (int i = 0; i < items.length; i++) {
+//            if (items[i] == null) {
+//                System.out.print("");
+//            }else if (items[i].equalsIgnoreCase(choiceToBuy)) {
+//                choiceOf = i;
+//                System.out.println(items[i] + " " + price[i]);
+//            }
+//
+//        }
+    }
     @Override
     public void listFromArray() {
-        for (String item : items) {
-            if (items[counter] == null) {
-                System.out.print("");
-            } else {
-                System.out.print(item + " " + price[counter] + "€" + ",\n");
 
-            }
-            counter++;
-
-
+        for (int i = 0; i < item.size() ; i++) {
+            System.out.println(item.get(i) + " " + prices.get(i) + "€"+ ",\n");
         }
+
+//        for (String item : item) {
+//            if (items[counter] == null) {
+//                System.out.print("");
+//            } else {
+//                System.out.print(item + " " + price[counter] + "€" + ",\n");
+//
+//            }
+//            counter++;
+//
+
+
     }
 
     @Override
     public void addStore() {
-        this.items[storeCounter] ="Beef filet 1Kg";
-        this.price[storeCounter] = 42.53;
-        storeCounter++;
-        this.items[storeCounter] = "Laptop lenovo";
-        this.price[storeCounter] = 420.60;
-        storeCounter++;
-        this.items[storeCounter] = "VideoGame";
-        this.price[storeCounter] = 65.80;
-        storeCounter++;
-        this.items[storeCounter] = "RedBull";
-        this.price[storeCounter] = 1.49;
-        storeCounter++;
-        this.items[storeCounter] = "ShipTicket for 1 week";
-        this.price[storeCounter] = 1300.99;
-        storeCounter++;
-        this.items[storeCounter] = "Backbag";
-        this.price[storeCounter] = 50.45;
-        storeCounter++;
+        this.item.add("Beef");
+        this.prices.add(42.53);
+        this.item.add("Laptop lenovo");
+        this.prices.add(420.60);
+        this.item.add("VideoGame");
+        this.prices.add(65.80);
+        this.item.add("RedBull");
+        this.prices.add(1.49);
+        this.item.add("ShipTicket for 1 week");
+        this.prices.add(1300.99);
+        this.item.add("BackBag");
+        this.prices.add(50.45);
+
+//        this.items[storeCounter] ="Beef filet 1Kg";
+//        this.price[storeCounter] = 42.53;
+//        storeCounter++;
+//        this.items[storeCounter] = "Laptop lenovo";
+//        this.price[storeCounter] = 420.60;
+//        storeCounter++;
+//        this.items[storeCounter] = "VideoGame";
+//        this.price[storeCounter] = 65.80;
+//        storeCounter++;
+//        this.items[storeCounter] = "RedBull";
+//        this.price[storeCounter] = 1.49;
+//        storeCounter++;
+//        this.items[storeCounter] = "ShipTicket for 1 week";
+//        this.price[storeCounter] = 1300.99;
+//        storeCounter++;
+//        this.items[storeCounter] = "Backbag";
+//        this.price[storeCounter] = 50.45;
+//        storeCounter++;
     }
 
-    @Override
-    public void searchInArray(String choiceToBuy) {
 
-        for (int i = 0; i < items.length; i++) {
-            if (items[i] == null) {
-                System.out.print("");
-            }else if (items[i].equalsIgnoreCase(choiceToBuy)) {
-                choiceOf = i;
-                System.out.println(items[i] + " " + price[i]);
-            }
 
-        }
-    }
 
 
 }
