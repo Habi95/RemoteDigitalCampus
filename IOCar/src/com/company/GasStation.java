@@ -64,7 +64,7 @@ public class GasStation extends MotherShop {
         typeToPay(customer);
         this.owner.thankSo(customer);
         customer.thankSo(this.owner);
-        mywriter.write(customer.name +" "+ customer.lastName + " " + choiceToBuy + " " + price[choiceOf] + "€"  );
+        mywriter.write("\n" + customer.name +" "+ customer.lastName + " " + choiceToBuy + " " + prices.get(this.whichIndex) + "€"  );
         mywriter.close();
 
 

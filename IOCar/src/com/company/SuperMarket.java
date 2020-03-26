@@ -32,7 +32,7 @@ public class SuperMarket extends MotherShop {
         typeToPay(custom);
         this.owner.thankSo(custom);
         custom.thankSo(this.owner);
-        mywriter.write("\n" + custom.name +" "+ custom.lastName + " " + choiceToBuy + " " + price[choiceOf] + "€"  );
+        mywriter.write("\n" + custom.name +" "+ custom.lastName + " " + choiceToBuy + " " + prices.get(this.whichIndex) + "€"  );
         mywriter.close();
     }
     @Override
