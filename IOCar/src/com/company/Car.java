@@ -3,7 +3,7 @@ package com.company;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-public class Car extends Vehicle implements IVehicleSound {
+public class Car extends Vehicle  {
         DecimalFormat df = new DecimalFormat("#.##");
 
     public Car(String brand, FuelTyp fuelTyp, Customer owner, String color, double horsePower, double maxTankSize, double mileage) {
@@ -21,7 +21,7 @@ public class Car extends Vehicle implements IVehicleSound {
     }
 
     @Override
-    public void drive(int kmAmount) {
+    public void drive(int kmAmpuount) {
         driverLicenz();
         this.kmAmount = kmAmount;
         if (this.isAllowedToDrive == true){
@@ -60,18 +60,5 @@ public class Car extends Vehicle implements IVehicleSound {
 
     }
 
-    @Override
-    public void startEnigne() {
 
-    }
-
-    @Override
-    public void driveSound() {
-
-    }
-
-    @Override
-    public void engineCoolDown() {
-
-    }
 }

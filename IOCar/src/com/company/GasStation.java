@@ -7,7 +7,7 @@ import java.util.Optional;
 public class GasStation extends MotherShop {
     FuelTyp[] fuelTyps = new FuelTyp[5];
     double[] fuelPrice = new double[5];
-    FuelTyp stringToEnum;
+
     ArrayList<FuelTyp> fuelTyp = new ArrayList<>();
     ArrayList<Double> fuelPriceOfl = new ArrayList<>();
 
