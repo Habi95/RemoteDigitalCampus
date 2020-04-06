@@ -7,32 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19b77b82-5ce8-40a4-ab3c-a31ec89ab62e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SQL_Chat_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL_Chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/SQL_Chat_jar/SQL_Chat.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/com/company/IChat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/com/company/Server.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/com/company/User1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_Chat/com/company/User2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/IChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/User1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/User2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQL_first/out/production/SQL_first/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/out/production/SQL_first/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQL_first/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +77,19 @@
       <option name="presentableId" value="Default" />
       <updated>1585828872114</updated>
     </task>
+    <task id="LOCAL-00001" summary="chat complete">
+      <created>1586166108458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586166108460</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chat complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3005" y="39" key="#com.intellij.ide.util.MemberChooser" timestamp="1585896284394">

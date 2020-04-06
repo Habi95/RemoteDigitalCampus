@@ -21,20 +21,21 @@ public class Main {
 
         if (tempString.equalsIgnoreCase("1")) {
             while (chaating == true) {
-
-                user2.writeMessage();
-                System.out.println(" ");
                 user2.readMessage();
                 System.out.println(" ");
+                user2.writeMessage();
+                System.out.println(" ");
+
             }
 
         } else if (tempString.equalsIgnoreCase("2")) {
 
             while (chaating == true) {
-                user1.writeMessage();
-                System.out.println(" ");
                 user1.readMessage();
                 System.out.println(" ");
+                user1.writeMessage();
+                System.out.println(" ");
+
             }
 
         }
