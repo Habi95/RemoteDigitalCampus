@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77fe7a14-1b95-4b4e-ae42-48f9c0c20147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/artifacts/SQL_Chat_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/SQL_Chat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/artifacts/SQL_Chat_jar/SQL_Chat.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/IChat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Server.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/User1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/User2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/IChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/User1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/User2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SQL_first/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SQL_first/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
