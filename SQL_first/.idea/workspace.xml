@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77fe7a14-1b95-4b4e-ae42-48f9c0c20147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SQL Foreign Key.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SQL Warenhaus.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL_first.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.19.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-3.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SQL_first/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../~$L Foreign Key.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$L Car Tabelle.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~WRL0203.tmp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/artifacts/SQL_Chat_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/libraries/mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/SQL_Chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/artifacts/SQL_Chat_jar/SQL_Chat.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/IChat.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/User1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/User2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/IChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/User1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/User2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SQL_first/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SQL_first/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,35 +85,57 @@
       <option name="presentableId" value="Default" />
       <updated>1585818343921</updated>
     </task>
+    <task id="LOCAL-00001" summary="sql the first writer + reade :D">
+      <created>1585824118680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585824118681</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="sql the first writer + reade :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql the first writer + reade :D" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1585824081442">
+    <state x="2949" y="-109" key="CommitChangelistDialog2" timestamp="1585824117521">
       <screen x="1920" y="-371" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824081442" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1585824081441">
+    <state x="2949" y="-109" key="CommitChangelistDialog2/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824117521" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1585824176692">
       <screen x="1920" y="-371" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824081441" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1585824081441">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824176692" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1585824176691">
       <screen x="1920" y="-371" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824081441" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1585824081441">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824176691" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1585824176691">
       <screen x="1920" y="-371" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824081441" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824176691" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1585824176691">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824176691" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1585818829738">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1585818829738" />
+    <state x="2792" y="63" key="Vcs.Push.Dialog.v2" timestamp="1585824120577">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2792" y="63" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585824120577" />
     <state x="498" y="307" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585818819872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="307" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1585818819872" />
+    <state x="2582" y="-50" key="new project wizard" timestamp="1585828871624">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2582" y="-50" key="new project wizard/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1585828871624" />
   </component>
 </project>

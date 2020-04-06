@@ -24,6 +24,8 @@ public class Main {
 
                  stmt = conn.createStatement();
 
+                 //datensatz einlesen
+
                  String notice_Head = " es funkt";
                  String notice1 = "Das geht ja wunderrrbar";
 
@@ -33,13 +35,14 @@ public class Main {
 
                  stmt.executeUpdate(sql);
 
+
                 System.out.println("Insert complete");
 
 
                 /*
                 DB tabelle auslesen
                 */
-                stmt = conn.createStatement();
+
                 ResultSet rs = stmt.executeQuery(query);
                 while (rs.next()) {
                     int numberOfPage = rs.getInt("number_of_pages");

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SQL_Chat:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SQL_Chat_jar</output-path>
+    <root id="archive" name="SQL_Chat.jar">
+      <element id="module-output" name="SQL_Chat" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SQL_first/lib/mysql-connector-java-8.0.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../SQL_first/lib/protobuf-java-3.6.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
