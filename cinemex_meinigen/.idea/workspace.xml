@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ffc0b4a-149b-4bfc-93b4-f8abec370d63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/Datenbank_Zuweisung.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/out/production/Datenbank_Zuweisung/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cinemex_meinigen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cinemex_meinigen/com/company/Cinema.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/cinemex_meinigen/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Cinema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../links.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../~$links.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ER-Modell/Kleine_Bücherei.ccd" beforeDir="false" afterPath="$PROJECT_DIR$/../ER-Modell/Kleine_Bücherei.ccd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$L Foreign Key.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1aWhPuuiap464RZjwtoxGvhFyO9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="cinemex_meinigen" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ffc0b4a-149b-4bfc-93b4-f8abec370d63" name="Default Changelist" comment="" />
+      <created>1586857236730</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586857236730</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2675" y="-146" key="CommitChangelistDialog2" timestamp="1586874728469">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2675" y="-146" key="CommitChangelistDialog2/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586874728469" />
+    <state x="3037" y="128" key="FileChooserDialogImpl" timestamp="1586857332004">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3037" y="128" key="FileChooserDialogImpl/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586857332004" />
+    <state width="2505" height="3" key="GridCell.Tab.0.bottom" timestamp="1586941945934">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="3" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586941945934" />
+    <state width="2505" height="3" key="GridCell.Tab.0.center" timestamp="1586941945934">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="3" key="GridCell.Tab.0.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586941945934" />
+    <state width="2505" height="3" key="GridCell.Tab.0.left" timestamp="1586941945934">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="3" key="GridCell.Tab.0.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586941945934" />
+    <state width="2505" height="3" key="GridCell.Tab.0.right" timestamp="1586941945934">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="3" key="GridCell.Tab.0.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586941945934" />
+    <state width="491" height="153" key="GridCell.Tab.1.bottom" timestamp="1586939911578">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911578" />
+    <state width="491" height="153" key="GridCell.Tab.1.center" timestamp="1586939911577">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.1.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911577" />
+    <state width="491" height="153" key="GridCell.Tab.1.left" timestamp="1586939911577">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.1.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911577" />
+    <state width="491" height="153" key="GridCell.Tab.1.right" timestamp="1586939911577">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.1.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911577" />
+    <state width="491" height="153" key="GridCell.Tab.2.bottom" timestamp="1586939911578">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911578" />
+    <state width="491" height="153" key="GridCell.Tab.2.center" timestamp="1586939911578">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.2.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911578" />
+    <state width="491" height="153" key="GridCell.Tab.2.left" timestamp="1586939911578">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.2.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911578" />
+    <state width="491" height="153" key="GridCell.Tab.2.right" timestamp="1586939911578">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.2.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939911578" />
+    <state width="491" height="153" key="GridCell.Tab.3.bottom" timestamp="1586871439569">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586871439569" />
+    <state width="491" height="153" key="GridCell.Tab.3.center" timestamp="1586871439569">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.3.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586871439569" />
+    <state width="491" height="153" key="GridCell.Tab.3.left" timestamp="1586871439569">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.3.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586871439569" />
+    <state width="491" height="153" key="GridCell.Tab.3.right" timestamp="1586871439569">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state width="491" height="153" key="GridCell.Tab.3.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586871439569" />
+    <state x="2725" y="-82" key="SettingsEditor" timestamp="1586857399372">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2725" y="-82" key="SettingsEditor/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586857399372" />
+    <state x="3026" y="321" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586857394983">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3026" y="321" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586857394983" />
+    <state x="2978" y="226" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586874376464">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2978" y="226" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586874376464" />
+    <state x="415" y="243" width="507" height="289" key="dock-window-1" timestamp="1586867502955">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="289" key="dock-window-1/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586867502955" />
+    <state x="3798" y="340" width="507" height="204" key="dock-window-10" timestamp="1586872352620">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3798" y="340" width="507" height="204" key="dock-window-10/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586872352620" />
+    <state x="3622" y="820" width="507" height="204" key="dock-window-11" timestamp="1586872774230">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="204" key="dock-window-11/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586872774230" />
+    <state x="3622" y="820" width="507" height="208" key="dock-window-12" timestamp="1586873974751">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="208" key="dock-window-12/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586873974751" />
+    <state x="3622" y="820" width="507" height="208" key="dock-window-13" timestamp="1586937860374">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="208" key="dock-window-13/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586937860374" />
+    <state x="3622" y="820" width="507" height="204" key="dock-window-14" timestamp="1586937917394">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="204" key="dock-window-14/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586937917394" />
+    <state x="3622" y="820" width="507" height="208" key="dock-window-15" timestamp="1586938250210">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="208" key="dock-window-15/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586938250210" />
+    <state x="3622" y="820" width="507" height="204" key="dock-window-16" timestamp="1586938415840">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="204" key="dock-window-16/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586938415840" />
+    <state x="3622" y="820" width="507" height="204" key="dock-window-17" timestamp="1586938978194">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="204" key="dock-window-17/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586938978194" />
+    <state x="3622" y="820" width="507" height="208" key="dock-window-18" timestamp="1586939077501">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="208" key="dock-window-18/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939077501" />
+    <state x="3622" y="820" width="507" height="208" key="dock-window-19" timestamp="1586939692094">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3622" y="820" width="507" height="208" key="dock-window-19/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586939692094" />
+    <state x="415" y="243" width="507" height="273" key="dock-window-2" timestamp="1586867588620">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="273" key="dock-window-2/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586867588620" />
+    <state x="415" y="243" width="507" height="257" key="dock-window-3" timestamp="1586867623342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="257" key="dock-window-3/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586867623342" />
+    <state x="415" y="243" width="507" height="241" key="dock-window-4" timestamp="1586867676459">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="241" key="dock-window-4/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586867676459" />
+    <state x="415" y="243" width="507" height="225" key="dock-window-5" timestamp="1586867733291">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="225" key="dock-window-5/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586867733291" />
+    <state x="415" y="243" width="507" height="209" key="dock-window-6" timestamp="1586870658437">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="243" width="507" height="209" key="dock-window-6/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586870658437" />
+    <state x="3798" y="340" width="507" height="202" key="dock-window-7" timestamp="1586870726063">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3798" y="340" width="507" height="202" key="dock-window-7/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586870726063" />
+    <state x="3798" y="340" width="507" height="204" key="dock-window-8" timestamp="1586870768154">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3798" y="340" width="507" height="204" key="dock-window-8/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586870768154" />
+    <state x="3798" y="340" width="507" height="208" key="dock-window-9" timestamp="1586872332491">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3798" y="340" width="507" height="208" key="dock-window-9/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586872332491" />
+    <state x="3182" y="173" key="save.file.as.template.dialog" timestamp="1586871363241">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="3182" y="173" key="save.file.as.template.dialog/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586871363241" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Cinema.java</url>
+          <line>259</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Cinema.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="counter == 40" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/com/company/Cinema.java</url>
+          <line>505</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

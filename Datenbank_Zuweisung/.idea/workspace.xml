@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b05c294-fa20-4ae0-b6ee-48ceee2633f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datenbank_Zuweisung.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Datenbank_Zuweisung/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/cinemex_meinigen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/out/production/cinemex_meinigen/com/company/Cinema.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/out/production/cinemex_meinigen/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/src/com/company/Cinema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen/src/com/company/backUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../links.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../~$links.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ER-Modell/Kleine_Bücherei.ccd" beforeDir="false" afterPath="$PROJECT_DIR$/../ER-Modell/Kleine_Bücherei.ccd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$L Foreign Key.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1aChWOYgWYfLArV7S3xEj1vQ6DW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Datenbank_Zuweisung" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b05c294-fa20-4ae0-b6ee-48ceee2633f8" name="Default Changelist" comment="" />
+      <created>1586245514062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586245514062</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1464" height="367" key="GridCell.Tab.0.bottom" timestamp="1586857936283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="367" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936283" />
+    <state width="1566" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586252857675" />
+    <state width="1464" height="367" key="GridCell.Tab.0.center" timestamp="1586857936283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="367" key="GridCell.Tab.0.center/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936283" />
+    <state width="1566" height="192" key="GridCell.Tab.0.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586252857675" />
+    <state width="1464" height="367" key="GridCell.Tab.0.left" timestamp="1586857936283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="367" key="GridCell.Tab.0.left/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936283" />
+    <state width="1566" height="192" key="GridCell.Tab.0.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586252857675" />
+    <state width="1464" height="367" key="GridCell.Tab.0.right" timestamp="1586857936283">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1464" height="367" key="GridCell.Tab.0.right/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936283" />
+    <state width="1566" height="192" key="GridCell.Tab.0.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586252857675" />
+    <state width="199" height="175" key="GridCell.Tab.1.bottom" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.1.center" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.1.center/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.1.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581055" />
+    <state width="199" height="175" key="GridCell.Tab.1.left" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.1.left/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.1.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581055" />
+    <state width="199" height="175" key="GridCell.Tab.1.right" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.1.right/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.1.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.2.bottom" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.2.center" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.2.center/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.2.center/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.2.left" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.2.left/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.2.left/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.2.right" timestamp="1586857936284">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.2.right/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936284" />
+    <state width="250" height="234" key="GridCell.Tab.2.right/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586246581056" />
+    <state width="199" height="175" key="GridCell.Tab.3.bottom" timestamp="1586857936282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936282" />
+    <state width="199" height="175" key="GridCell.Tab.3.center" timestamp="1586857936282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.3.center/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936282" />
+    <state width="199" height="175" key="GridCell.Tab.3.left" timestamp="1586857936282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.3.left/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936282" />
+    <state width="199" height="175" key="GridCell.Tab.3.right" timestamp="1586857936282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="199" height="175" key="GridCell.Tab.3.right/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1586857936282" />
+    <state x="1920" y="-30" key="SettingsEditor" timestamp="1586245590456">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="1920" y="-30" key="SettingsEditor/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586245590456" />
+    <state x="2221" y="373" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586245584585">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2221" y="373" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586245584585" />
+    <state x="702" y="586" width="213" height="244" key="dock-window-1" timestamp="1586276092642">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="702" y="586" width="213" height="244" key="dock-window-1/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586276092642" />
+    <state x="2643" y="-20" key="new project wizard" timestamp="1586857236198">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2643" y="-20" key="new project wizard/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1586857236198" />
+  </component>
+</project>
