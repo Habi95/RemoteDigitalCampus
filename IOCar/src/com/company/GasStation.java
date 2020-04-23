@@ -25,12 +25,7 @@ public class GasStation extends MotherShop {
         prices.add(0.00);
         prices.add(0.00);
 
-//        fuelTyps[storeCounter] = FuelTyp.SUPER95;
-//        fuelPrice[storeCounter] = FuelShop.getMyFuelPrice(FuelTyp.SUPER95);
-//        storeCounter++;
-//        fuelTyps[storeCounter] = FuelTyp.DIESEL;
-//        fuelPrice[storeCounter] = FuelShop.getMyFuelPrice(FuelTyp.DIESEL);
-//        storeCounter++;
+//
 
     }
 

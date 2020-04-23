@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DataBaseConnector2:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e9f7d14-afaa-4cf0-a929-2f347f6a16d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DataBaseConnector2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataBaseConnector2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/DataBaseConnector2_jar/DataBaseConnector2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DataBaseConnector2/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DataBaseConnector2/com/company/DataBaseConnector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/DataBaseConnector2/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/DataBaseConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/Deliver_Service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/out/production/Deliver_Service/com/company/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/out/production/Deliver_Service/com/company/Delivery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/out/production/Deliver_Service/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/DeliveryPlaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Dishes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Ingridients.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Order_Wirt_Delivery.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/out/artifacts/SQL_Chat_jar/SQL_Chat.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_Chat/src/com/company/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_first/.idea/artifacts/SQL_first_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_first/out/artifacts/SQL_first_jar/SQL_first.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_first/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_first/src/com/company/Read.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQL_first/src/com/company/Write.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/libraries/DataBaseConnector2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/libraries/mysql_mysql_connector_java_8_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/Wirt_delivery.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/out/production/Wirt_delivery/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/out/production/Wirt_delivery/com/company/Restaurant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/DB_Connector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/Dish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/Evaluation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Wirt_delivery/src/com/company/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cinemex_meinigen.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/libraries/DataBase_Connector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/com/company/database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../~$L Warenhaus.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Datenbank_Zuweisung/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IOCar/src/com/company/GasStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IOCar/src/com/company/GasStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_Chat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_Chat/out/production/SQL_Chat/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_first/out/production/SQL_first/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/out/production/SQL_first/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SQL_first/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL_first/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cinemex_meinigen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemex_meinigen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cinemex_meinigen/out/production/cinemex_meinigen/com/company/Cinema.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemex_meinigen/out/production/cinemex_meinigen/com/company/Cinema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$links.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../~$links.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1at4syqa3x3G3f3zLDNOaDeonaY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="DataBaseConnector2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e9f7d14-afaa-4cf0-a929-2f347f6a16d3" name="Default Changelist" comment="" />
+      <created>1587541766401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587541766401</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2867" y="71" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587543413113">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2867" y="71" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1587543413113" />
+    <state x="2552" y="-201" key="SettingsEditor" timestamp="1587543417046">
+      <screen x="1920" y="-371" width="2560" height="1400" />
+    </state>
+    <state x="2552" y="-201" key="SettingsEditor/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1587543417046" />
+  </component>
+</project>

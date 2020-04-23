@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DataBase_Connector">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Libary/DataBase_Connector.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

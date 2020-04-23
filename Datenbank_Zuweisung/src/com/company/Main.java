@@ -13,7 +13,7 @@ public class Main {
 
         try {
 
-            String url ="jdbc:mysql://localhost:3306/cinema_meinigen?user=root";
+            String url ="jdbc:mysql://localhost:3306/lieferservice?user=root";
             conn = DriverManager.getConnection(url);
 
             Statement stmt = null;
