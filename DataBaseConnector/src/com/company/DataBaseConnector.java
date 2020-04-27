@@ -8,7 +8,7 @@ import java.sql.*;
     private Statement statement = null;
     private String url;
 
-    DataBaseConnector(String url) {
+    public DataBaseConnector(String url) {
         this.url = url;
     }
 
@@ -76,7 +76,16 @@ import java.sql.*;
     }
 
     // public boolean update(String sql) {...}
-    // public boolean insert(String sql) {...}
+    public void insert(String sql) {
+
+        buildConnection();
+        try {
+            Statement st = connection.createStatement();
+            st.executeUpdate(sql);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
 
 

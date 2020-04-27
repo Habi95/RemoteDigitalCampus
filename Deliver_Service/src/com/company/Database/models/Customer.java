@@ -1,15 +1,22 @@
-package com.company;
+package com.company.Database.models;
 
+
+import com.company.Database.repository.DB_Connector;
 
 import java.sql.*;
 import java.util.Scanner;
 
 public class Customer {
 
-    Connection conn = null;
-    String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
-    Scanner scanner = new Scanner(System.in);
+    private Connection conn = null;
+    private String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
+    //ToDo dbConnector
+    private Scanner scanner = new Scanner(System.in);
+    private DB_Connector db_connector;
 
+    public Customer(DB_Connector db_connector) {
+        this.db_connector = db_connector;
+    }
 
     public void createUser () {
 

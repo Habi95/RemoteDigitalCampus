@@ -16,3 +16,35 @@ id;userID;totalBill;time
 14 ; 1 ; 10.25€ ; 13:47:39
 15 ; 2 ; 10.0€ ; 13:47:39
 16 ; 1 ; 36.0€ ; 13:47:39
+Brokkoli ; 4
+Gnocchi ; 4
+Hackfleisch ; 6
+Käse ; 6
+Knoblauch ; 10
+Parmesan ; 13
+Pizzabrot ; 3
+Pizzateig 100g ; 5
+Sahne ; 16
+Salami ; 4
+Schinken ; 11
+Spaghetti ; 10
+Speck ; 10
+Tomaten ; 10
+Tomatensauce ; 12
+Tortellini ; 6
+Brokkoli ; 4
+Gnocchi ; 4
+Hackfleisch ; 6
+Käse ; 6
+Knoblauch ; 10
+Parmesan ; 13
+Pizzabrot ; 3
+Pizzateig 100g ; 5
+Sahne ; 16
+Salami ; 4
+Schinken ; 11
+Spaghetti ; 10
+Speck ; 10
+Tomaten ; 10
+Tomatensauce ; 12
+Tortellini ; 6

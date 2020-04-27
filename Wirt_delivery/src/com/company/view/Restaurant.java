@@ -1,4 +1,4 @@
-package com.company;
+package com.company.view;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -99,6 +99,7 @@ public class Restaurant {
                     ingriedientsList();
 
                     System.out.println("Wollen Sie noch eine Zutata hinzufügen? Ja / Nein");
+                    String temp2 = scanner.nextLine();
                     String temp1 = scanner.nextLine();
                     if (temp1.equalsIgnoreCase("JA")) {
                         System.out.println("bitte in Zutaten ID eingeben");
