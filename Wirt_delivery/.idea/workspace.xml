@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../DataBaseConnector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataBaseConnector/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/DeliveryPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/DeliveryPlaces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/repository/DishRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/repository/DishRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Deliver_Service/src/com/company/Database/repository/UserRepo.java" afterDir="false" />
