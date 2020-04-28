@@ -1,4 +1,4 @@
-package com.company.controller;
+package com.company.Database.repository;
 
 import com.company.DataBaseConnector;
 

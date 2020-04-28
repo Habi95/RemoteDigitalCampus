@@ -1,6 +1,7 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.User;
+import com.company.Database.models.UserEvaluation;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
@@ -11,7 +12,7 @@ public class UserRepo implements Repository<User> {
     private DB_Connector db_connector;
     private TerminalOutput output;
 
-    public UserRepo (DB_Connector db_connector, TerminalOutput output) {
+    public UserRepo(DB_Connector db_connector, TerminalOutput output) {
         this.db_connector = db_connector;
         this.output = output;
     }
@@ -49,7 +50,7 @@ public class UserRepo implements Repository<User> {
 
     @Override
     public User findOne(int id){
-       User resultUser = null;
+        User resultUser = null;
         String sql =  "SELECT * FROM `user` WHERE user_id =" + id;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
@@ -132,22 +133,16 @@ public class UserRepo implements Repository<User> {
         }
     }
 
-    public boolean isFreeEmail (String email) {
-        int count = 0;
-        boolean freeEmail = false;
+    public Integer freeEmail (String email) {
+        int freeEmail = 0;
         String sql =  "SELECT COUNT(*) as anzahl FROM `user` WHERE email = '" + email + "'";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
-            return false;
+            return null;
         }
         try {
-            while (result.next()) {
-                count = result.getInt("anzahl");
-                if (count < 1) {
-                    freeEmail = true;
-                }
-            }
+            while (result.next()) freeEmail = result.getInt("anzahl");
         } catch (SQLException e) {
             e.printStackTrace();
             output.outPutStringLanding(e.getMessage());

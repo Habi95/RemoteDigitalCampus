@@ -1,4 +1,13 @@
-package com.company.view;
+package com.company.controller;
+
+import com.company.DataBaseConnector;
+import com.company.Database.models.Dish;
+import com.company.Database.models.Dishes;
+import com.company.Database.models.Ingridients;
+import com.company.Database.repository.DB_Connector;
+import com.company.Database.repository.DishRepo;
+import com.company.Database.repository.IngridientsRepo;
+import com.company.view.TerminalOutput;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -11,12 +20,21 @@ public class Restaurant {
     Connection conn = null;
     String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
     Scanner scanner = new Scanner(System.in);
-
+    DB_Connector db_connector;
+    TerminalOutput output;
+    DishRepo dishRepo;
+    IngridientsRepo ingridientsRepo;
     int wirt = 1;
     int vorspeise = 1;
-    int hauptspeise = 2;
+    String hauptspeise = "2";
     int lastDish;
 
+    public Restaurant(DB_Connector db_connector, TerminalOutput output, DishRepo dishRepo, IngridientsRepo ingridientsRepo) {
+        this.db_connector = db_connector;
+        this.output = output;
+        this.dishRepo = dishRepo;
+        this.ingridientsRepo = ingridientsRepo;
+    }
 
     public void writeDish() {
 
@@ -27,16 +45,17 @@ public class Restaurant {
             try {
                 stmt = conn.createStatement();
 
-                System.out.println("Wollen Sie eine Hauptspeise (HS) oder eine Vorspeise (VS) erstellen?");
+                output.outPutStringLanding("Wollen Sie eine Hauptspeise (HS) oder eine Vorspeise (VS) erstellen?");
                 String temp1 = scanner.nextLine();
                 if (temp1.equalsIgnoreCase("VS")) {
-                    System.out.println("Wie heißt die Vorspeise?");
+                   output.outPutString("Wie heißt die Vorspeise?");
                     String temp = scanner.nextLine();
-                    String sql = "INSERT INTO `dishes`( `dish_name`, `type`)" +
-                            " VALUES " +
-                            "('" + temp + "'," + vorspeise + ")";
-
-                    stmt.executeUpdate(sql);
+                    dishRepo.create(new Dishes(temp, vorspeise ));
+//                    String sql = "INSERT INTO `dishes`( `dish_name`, `type`)" +
+//                            " VALUES " +
+//                            "('" + temp + "'," + vorspeise + ")";
+//
+//                    stmt.executeUpdate(sql);
                     addIngridient();
 
 
@@ -44,11 +63,12 @@ public class Restaurant {
                 if (temp1.equalsIgnoreCase("HS")) {
                     System.out.println("Wie heißt die Hauptspeise?");
                     String temp = scanner.nextLine();
-                    String sql = "INSERT INTO `dishes`( `dish_name`, `type`) " +
-                            "VALUES " +
-                            "('" + temp + "'," + hauptspeise + ")";
-
-                    stmt.executeUpdate(sql);
+                    dishRepo.create(new Dishes(temp,hauptspeise));
+//                    String sql = "INSERT INTO `dishes`( `dish_name`, `type`) " +
+//                            "VALUES " +
+//                            "('" + temp + "'," + hauptspeise + ")";
+//
+//                    stmt.executeUpdate(sql);
                     addIngridient();
 
 

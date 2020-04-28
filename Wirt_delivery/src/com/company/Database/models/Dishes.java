@@ -8,11 +8,14 @@ public class Dishes {
     private int dishId;
     private String dishTyp;
     private double price;
-    private int HasAddIng = 0; //boolean
-    private int HasDeleteING = 0; //boolean
     public ArrayList<Ingridients> dishIngridients = new ArrayList<>();
 
-    public Dishes(String name, int id, String dishTyp, double price) {
+//    public Dishes(String name, int dishTyp) {
+//        this.name = name;
+//        this.dishTyp = dishTyp;
+//    }
+
+        public Dishes(String name, int id, String dishTyp, double price) {
         this.name = name;
         this.dishId = id;
         this.dishTyp = dishTyp;
@@ -40,26 +43,15 @@ public class Dishes {
     }
 
 
-
     public double getPrice() {
         return price;
     }
 
-
-
-    public int getHasAddIng() {
-        return HasAddIng;
+    public void setDishId(int dishId) {
+        this.dishId = dishId;
     }
 
-    public void setHasAddIng(int hasAddIng) {
-        HasAddIng = hasAddIng;
-    }
-
-    public int getHasDeleteING() {
-        return HasDeleteING;
-    }
-
-    public void setHasDeleteING(int hasDeleteING) {
-        HasDeleteING = hasDeleteING;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

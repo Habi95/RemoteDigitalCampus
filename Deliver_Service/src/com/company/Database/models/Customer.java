@@ -71,9 +71,8 @@ public class Customer {
     }
 
     public boolean isEmailFree(String email) {
-        int freeEmail = userRepo.freeEmail(email);
         boolean isEmailFree = false;
-        if (freeEmail > 0) {
+        if (!userRepo.isFreeEmail(email)) {
             output.outPutString("Email vergeben");
         } else {
             isEmailFree = true;

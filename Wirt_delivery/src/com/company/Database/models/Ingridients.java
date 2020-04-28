@@ -16,9 +16,7 @@ public class Ingridients {
     }
 
 
-
     public String getName() {
         return name;
     }
-
 }

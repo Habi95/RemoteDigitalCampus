@@ -1,4 +1,4 @@
-package com.company.models;
+package com.company.Database.models;
 
 public class Dish {
 

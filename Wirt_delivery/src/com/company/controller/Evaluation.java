@@ -1,8 +1,12 @@
-package com.company.view;
+package com.company.controller;
 
-import com.company.controller.DB_Connector;
-import com.company.models.Dish;
-import com.company.models.User;
+import com.company.Database.repository.DB_Connector;
+import com.company.Database.models.Dish;
+import com.company.Database.models.UserEvaluation;
+import com.company.Database.repository.DishRepo;
+import com.company.Database.repository.IngridientsRepo;
+import com.company.Database.repository.UserRepo;
+import com.company.view.TerminalOutput;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -15,8 +19,12 @@ import java.util.ArrayList;
 
 public class Evaluation    {
     String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
-    DB_Connector db_connector = new DB_Connector(url);
-    ArrayList<User> users = new ArrayList<>();
+    DB_Connector db_connector;
+    TerminalOutput output;
+    DishRepo dishRepo;
+    IngridientsRepo ingridientsRepo;
+    UserRepo userRepo;
+    ArrayList<UserEvaluation> users = new ArrayList<>();
     ArrayList<Dish> mostOfOrderdDish = new ArrayList<>();
     ArrayList<Dish> dishes = new ArrayList<>();
     String filePath = "C:\\Users\\DCV\\Desktop\\HelloWorld\\RemoteDigitalCampus\\Zutatenliste_Wirt_delivery.txt";
@@ -33,6 +41,14 @@ public class Evaluation    {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
+    }
+
+    public Evaluation(DB_Connector db_connector, TerminalOutput output, DishRepo dishRepo, IngridientsRepo ingridientsRepo, UserRepo userRepo) {
+        this.db_connector = db_connector;
+        this.output = output;
+        this.dishRepo = dishRepo;
+        this.ingridientsRepo = ingridientsRepo;
+        this.userRepo = userRepo;
     }
 
     public void howMuchOrder ()
@@ -73,7 +89,7 @@ public class Evaluation    {
             while (result.next()) {
                 int x = result.getInt("count(order_detail.order_id)");
                 String email = result.getString("email");
-                User user = new User(email,x);
+                UserEvaluation user = new UserEvaluation(email,x);
                 users.add(user);
                 System.out.println("Der Kunde mit der Email: " + email + " hat bis jetzt " + x + " mal bestellt");
             }
