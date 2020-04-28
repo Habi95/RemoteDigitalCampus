@@ -31,7 +31,7 @@ public class UserRepo implements Repository<User> {
             while (result.next()) {
                 int ID = result.getInt("user_id");
                 String email = result.getString("email");
-                int password = result.getInt("password");
+                String password = result.getString("password");
                 String place = result.getString("place");
 
 
@@ -56,17 +56,15 @@ public class UserRepo implements Repository<User> {
             output.outPutStringLanding("something go wrong");
             return null;
         }
-
         try {
             while (result.next()) {
                 int ID = result.getInt("user_id");
                 String email = result.getString("email");
-                int password = result.getInt("password");
+                String password = result.getString("password");
                 String place = result.getString("place");
 
 
                 resultUser = new User(ID , email , password ,place);
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,7 +95,7 @@ public class UserRepo implements Repository<User> {
             while (result.next()) {
                 int ID = result.getInt("user_id");
                 String email1 = result.getString("email");
-                int password = result.getInt("password");
+                String password = result.getString("password");
                 String place = result.getString("place");
 
 
@@ -110,6 +108,46 @@ public class UserRepo implements Repository<User> {
         } finally {
             db_connector.closeConnection();
             return resultUser;
+        }
+    }
+
+    public Integer lastUserId () {
+        int newUserID = 0;
+        String sql =  "SELECT user_id FROM `user` ORDER By user_id DESC LIMIT 1";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+        try {
+            while (result.next()) {
+                newUserID = result.getInt("user_id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return newUserID;
+        }
+    }
+
+    public Integer freeEmail (String email) {
+        int freeEmail = 0;
+        String sql =  "SELECT COUNT(*) as anzahl FROM `user` WHERE email = '" + email + "'";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+        try {
+            while (result.next()) freeEmail = result.getInt("anzahl");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return freeEmail;
         }
     }
 }

@@ -2,288 +2,84 @@ package com.company.Database.models;
 
 
 import com.company.Database.repository.DB_Connector;
+import com.company.Database.repository.UserRepo;
+import com.company.view.TerminalOutput;
 
-import java.sql.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Customer {
-
-    private Connection conn = null;
-    private String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
-    //ToDo dbConnector
     private Scanner scanner = new Scanner(System.in);
     private DB_Connector db_connector;
+    private UserRepo userRepo;
+    private TerminalOutput output;
 
-    public Customer(DB_Connector db_connector) {
+    public Customer(DB_Connector db_connector, UserRepo userRepo, TerminalOutput output) {
         this.db_connector = db_connector;
+        this.userRepo = userRepo;
+        this.output = output;
     }
 
-    public void createUser () {
+    public void createUser() {
+        output.outPutString("Willkommen zur Account erstellung");
+        output.outPutString("Email");
+        String email = scanner.nextLine();
 
-        try {
-            conn = DriverManager.getConnection(url);
-            Statement stmt = null;
-
-            try {
-                stmt = conn.createStatement();
-                System.out.println("Willkommen zur Account erstellung");
-                System.out.println("Email");
-                String email = scanner.nextLine();
-
-                if (!isEmailFree(email)) {
-                    createUser();
-                } else {
-
-                    System.out.println("Passwort");
-                    String password = scanner.nextLine();
-                    System.out.println("ORT");
-                    String place = scanner.nextLine();
-
-                    String sql = "INSERT INTO `user`" +
-                            "(`email`, `password`, `place`) " +
-                            "VALUES " +
-                            "('" + email + "','" + password + "','" + place + "') ";
-
-                    stmt.executeUpdate(sql);
-                    System.out.println("Account wurde erstellt\nIhre Daten: \n");
-                    accInfo();
-
-
-                }
-
-
-
-
-
-            } catch (SQLException e) {
-                throw new Error("problem " , e);
-            } finally {
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-
-
-        } catch (SQLException e) {
-           throw new Error("Problem " , e);
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
+        if (!isEmailFree(email)) {
+            createUser();
+        } else {
+            output.outPutString("Passwort");
+            String password = scanner.nextLine();
+            output.outPutString("ORT");
+            String place = scanner.nextLine();
+            userRepo.create(new User(userRepo.lastUserId() + 1, email, password, place));
+            output.outPutString("Account wurde erstellt\nIhre Daten: \n");
+            accInfo(userRepo.lastUserId());
 
         }
-
-
     }
-    public void accInfo () {
 
-        try {
-            conn = DriverManager.getConnection(url);
-            Statement stmt = null;
-            String query = "SELECT `user_id`, `email`, `password`, `place` FROM `user` ORDER BY user_id DESC LIMIT 1";
-            //SELECT `user_id`, `email`, `password`, `place` FROM `user` ORDER BY user_id DESC LIMIT 1
+    public void accInfo(int id) {
+        User newUser = userRepo.findOne(id);
 
-            try {
-                stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
+        output.outPutString("Ihre Anmelde Daten lauten wie folgt:\nUser ID: " + newUser.getUserID() +
+                "\nEmail: " + newUser.getEmail() +
+                "\nPasswort: " + newUser.getPassword() +
+                "\nLieferadresse: " + newUser.getPlace());
+    }
 
-                while (rs.next()) {
-                    int userID = rs.getInt("user_id");
-                    String email = rs.getString("email");
-                    String password = rs.getString("password");
-                    String place = rs.getString("place");
-
-                    System.out.println("User ID: " + userID + "\nEmail: " + email + "\nPasswort: " + password + "\nOrt: " + place);
-
-                }
-
-
-            } catch (SQLException e) {
-                throw new Error("Problem " , e);
-            } finally {
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                }catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-
-        } catch (SQLException e) {
-            throw new Error("Problem " , e);
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
+    public void custAccInfo(int userId, String userEmail, String userPlace) {
+        User tempUser = userRepo.findOne(userId);
+        if (tempUser.getEmail().equals(userEmail) && tempUser.getPlace().equals(userPlace)) {
+            accInfo(tempUser.getUserID());
+        } else {
+            output.outPutString("Wrong login data");
         }
     }
-    public void custAccInfo (int userId, String userEmail, String userPlace) {
 
-        try {
-            conn = DriverManager.getConnection(url);
-            Statement stmt = null;
-            String query = "SELECT  `email`, `user_id`,  `password`, `place` FROM `user` Where user.user_id =" + userId;
-
-
-            try {
-                stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
-
-                while (rs.next()) {
-                    String email = rs.getString("email");
-                    int userID = rs.getInt("user_id");
-                    String password = rs.getString("password");
-                    String place = rs.getString("place");
-
-                    if (email.equals(userEmail) && place.equals(userPlace)) {
-
-
-                    System.out.println("User ID: " + userID + "\nEmail: " + email + "\nPasswort: " + password + "\nOrt: " + place);
-
-
-                    } else {
-                        System.out.println("Falsche Daten");
-                    }
-
-
-                }
-
-
-            } catch (SQLException e) {
-                throw new Error("Problem " , e);
-            } finally {
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                }catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-
-        } catch (SQLException e) {
-            throw new Error("Problem " , e);
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-    }
-    public boolean isRightLogin (String userEmail, String userPassword) {
+    public boolean isRightLogin(String userEmail, String userPassword) {
+        ArrayList<User> tempUser = userRepo.findAll();
         boolean isRightLogin = false;
-        try {
-            conn = DriverManager.getConnection(url);
-            Statement stmt = null;
-            String query = "SELECT  `email`, `password`  FROM `user`";
-
-
-            try {
-                stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
-
-                while (rs.next()) {
-                    String email = rs.getString("email");
-                    String password = rs.getString("password");
-
-                        if (email.equals(userEmail) && password.equals(userPassword)) {
-                            isRightLogin = true;
-                        }
-
-                    }
-
-
-
-
-
-            } catch (SQLException e) {
-                throw new Error("Problem " , e);
-            } finally {
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                }catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-
-        } catch (SQLException e) {
-            throw new Error("Problem " , e);
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
+        for (int i = 0; i < tempUser.size(); i++) {
+            if (tempUser.get(i).getEmail().equalsIgnoreCase(userEmail) &&
+                    tempUser.get(i).getPassword().equalsIgnoreCase(userPassword)) {
+                isRightLogin = true;
             }
         }
 
         return isRightLogin;
     }
 
-
-    public boolean isEmailFree (String email) {
-
+    public boolean isEmailFree(String email) {
+        int freeEmail = userRepo.freeEmail(email);
         boolean isEmailFree = false;
-
-        try {
-
-            conn = DriverManager.getConnection(url);
-            Statement stmt = null;
-
-            String query = "SELECT COUNT(*) as anzahl FROM `user` WHERE email = '" + email + "'"; //Select
-            try {
-                stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
-
-                while (rs.next()) {
-                    int count = rs.getInt("anzahl");
-                    if (count > 0) {
-                        System.out.println("Email vergeben");
-                    } else {
-                        isEmailFree = true;
-                    }
-                }
-            } catch (SQLException e) {
-                throw  new Error("Problem " , e);
-            } finally {
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-
-        } catch (SQLException e) {
-           throw  new Error("Problem " , e);
-        } finally {
-            try {
-                if (conn != null )
-                    conn.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
+        if (freeEmail > 0) {
+            output.outPutString("Email vergeben");
+        } else {
+            isEmailFree = true;
         }
-
         return isEmailFree;
 
     }
-
 
 }

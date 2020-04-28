@@ -1,7 +1,6 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.Dishes;
-import com.company.Database.models.Ingridients;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
@@ -93,31 +92,5 @@ public class DishRepo implements Repository<Dishes> {
     public void create(Dishes entity) {
 
     }
-    public  void dishesReceiveIng(Dishes dishes)
-    {
-        String sql = "SELECT ingridients.id, ingridients.ing_name FROM `dish_ingridients` \n" +
-                "INNER JOIN ingridients On ingridients.id = dish_ingridients.ing_id\n" +
-                "WHERE dish_id =" + dishes.getDishId();;
-        ResultSet result = db_connector.fetchData(sql);
-        if (result == null) {
-            System.out.println("something go wrong");
-            return;
-        }
 
-        try {
-            Ingridients ingridients;
-            while (result.next()) {
-                int id = result.getInt("id");
-                String ing_name = result.getString("ing_name");
-
-                ingridients = new Ingridients(id, ing_name);
-                dishes.dishIngridients.add(ingridients);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println(e.getMessage());
-        } finally {
-            db_connector.closeConnection();
-        }
-    }
 }

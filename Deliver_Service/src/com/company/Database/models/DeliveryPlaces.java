@@ -21,23 +21,12 @@ public class DeliveryPlaces {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getPlace() {
         return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
 }
