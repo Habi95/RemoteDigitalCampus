@@ -39,13 +39,13 @@ public class Dishes {
         return dishTyp;
     }
 
-
-
     public double getPrice() {
         return price;
     }
 
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public int getHasAddIng() {
         return HasAddIng;

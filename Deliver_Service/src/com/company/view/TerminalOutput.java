@@ -21,6 +21,12 @@ public class TerminalOutput {
         System.out.println(outPut);
     }
 
+    /*
+    for(){
+    <checkBox>dish[i].name</checkBox>
+    }
+
+     */
     public void printMenu(Restaurant restaurant, String choice) {
 
         switch (choice.toUpperCase()) {

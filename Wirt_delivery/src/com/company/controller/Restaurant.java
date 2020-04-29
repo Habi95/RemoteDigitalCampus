@@ -58,15 +58,15 @@ public class Restaurant {
             ingOfDish();
             ingriedientsList();
 
-            output.outPutString("Wollen Sie noch eine Zutata hinzufügen? Ja / Nein");
+            output.outPutString("Wollen Sie noch eine Zutata hinzufügen? J / N");
             String bug1 = scanner.nextLine();
             String temp1 = scanner.nextLine();
-            if (temp1.equalsIgnoreCase("JA")) {
+            if (temp1.equalsIgnoreCase("J")) {
                 output.outPutString("bitte in Zutaten ID eingeben");
                 String tempIng = scanner.nextLine();
                 ingridients = new Ingridients(dishRepo.lastDishID(), tempIng);
                 ingridientsRepo.create(ingridients);
-            } else if (temp1.equalsIgnoreCase("Nein")) {
+            } else if (temp1.equalsIgnoreCase("N")) {
                 run = false;
                 output.outPutString("Danke für die Eingabe");
                 addToMenu();

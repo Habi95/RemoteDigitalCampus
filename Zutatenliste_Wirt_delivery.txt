@@ -1,17 +1,18 @@
 IngName ; x Mal
-Brokkoli ; 4
-Gnocchi ; 4
-Hackfleisch ; 6
-Käse ; 6
-Knoblauch ; 10
-Parmesan ; 13
-Pizzabrot ; 3
-Pizzateig 100g ; 5
-Sahne ; 16
-Salami ; 4
-Schinken ; 11
-Spaghetti ; 10
-Speck ; 10
-Tomaten ; 10
-Tomatensauce ; 12
-Tortellini ; 6
+Brokkoli ; 15
+Gnocchi ; 16
+Hackfleisch ; 18
+Käse ; 22
+Knoblauch ; 31
+Mozzarella ; 15
+Parmesan ; 30
+Pizzabrot ; 20
+Pizzateig 100g ; 18
+Sahne ; 34
+Salami ; 16
+Schinken ; 28
+Spaghetti ; 22
+Speck ; 22
+Tomaten ; 25
+Tomatensauce ; 27
+Tortellini ; 18

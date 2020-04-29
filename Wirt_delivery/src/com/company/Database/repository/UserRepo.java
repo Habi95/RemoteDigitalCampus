@@ -1,10 +1,14 @@
 package com.company.Database.repository;
 
+import com.company.Database.models.BillEvaluation;
+import com.company.Database.models.TownEvaluation;
 import com.company.Database.models.User;
+import com.company.Database.models.UserEvaluation;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.ArrayList;
 
 public class UserRepo implements Repository<User> {
@@ -150,4 +154,117 @@ public class UserRepo implements Repository<User> {
             return freeEmail;
         }
     }
+
+    public Integer howMuchOrdering () {   int x = 0;
+        String sql =  "SELECT count(user_order.id) FROM user_order";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+        try {
+            while (result.next()) {
+                 x = result.getInt("count(user_order.id)");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return x;
+        }
+    }
+
+    public ArrayList<UserEvaluation> orderPerCustomer () {
+        ArrayList<UserEvaluation> users = new ArrayList<>();
+        String sql =  "SELECT count(order_detail.order_id), user.email FROM `order_detail`\n" +
+                "                INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
+                "                INNER JOIN user ON user.user_id = user_order.user_id\n" +
+                "                GROUP BY user.email";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+
+        try {
+            while (result.next()) {
+                int x = result.getInt("count(order_detail.order_id)");
+                String email = result.getString("email");
+                users.add(new UserEvaluation(email,x));
+
+
+
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return users;
+        }
+    }
+
+    public ArrayList<TownEvaluation> orderPerTown () {
+        ArrayList<TownEvaluation> town = new ArrayList<>();
+        String sql = "SELECT count(order_detail.order_id),user.place FROM `order_detail`\n" +
+                "INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
+                "INNER JOIN user ON user.user_id = user_order.user_id\n" +
+                "GROUP BY user.place";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+
+        try {
+            while (result.next()) {
+                int x = result.getInt("count(order_detail.order_id)");
+                String place = result.getString("place");
+                town.add(new TownEvaluation(place,x));
+
+
+
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return town;
+        }
+    }
+
+    public ArrayList<BillEvaluation> bill () {
+        ArrayList<BillEvaluation> billList = new ArrayList<>();
+        String sql = "SELECT `id`, `user_id`, `total_price`, `time` FROM `user_order`";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+
+        try {
+            while (result.next()) {
+                int id = result.getInt("id");
+                int user_id = result.getInt("user_id");
+                double bill = result.getDouble("total_price");
+                Time time = result.getTime("time");
+                billList.add(new BillEvaluation(id ,user_id ,bill ,time));
+
+
+
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return billList;
+        }
+    }
+
 }

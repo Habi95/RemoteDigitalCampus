@@ -1,8 +1,7 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.Ingridients;
-import com.company.Database.repository.DB_Connector;
-import com.company.Database.repository.Repository;
+import com.company.Database.models.IngridientsEvaluation;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
@@ -110,6 +109,43 @@ public class IngridientsRepo implements Repository<Ingridients> {
     public void create(Ingridients entity) {
         String sql = " INSERT INTO `dish_ingridients`(`dish_id`, `ing_id`) VALUES (" + entity.getId() + " , " + entity.getName() + ")";
         db_connector.insert(sql);
+    }
+    
+    public ArrayList<IngridientsEvaluation> ingridientsEvaluations () {
+        ArrayList<IngridientsEvaluation> ingList = new ArrayList<>();
+        String sql = "select ingridients.ing_name, count(*) + (select count(*) from order_detail_ingriedients\n" +
+                "INNER JOIN ingridients ON ingridients.id = order_detail_ingriedients.ing_order_id\n" +
+                "WHERE order_detail_ingriedients.added_ing = 1\n" +
+                "AND ingridients.ing_name = ing_name) - (select count(*) from order_detail_ingriedients\n" +
+                "INNER JOIN ingridients ON ingridients.id = order_detail_ingriedients.ing_order_id\n" +
+                "WHERE order_detail_ingriedients.removed_ing = 1\n" +
+                "AND ingridients.ing_name = ing_name) as 'count'  from order_detail\n" +
+                "INNER JOIN dish_ingridients ON dish_ingridients.dish_id = order_detail.dish_order_id\n" +
+                "INNER JOIN ingridients ON ingridients.id = dish_ingridients.ing_id\n" +
+                "group by ingridients.ing_name";
+        ResultSet result = db_connector.fetchData(sql);
+        if (result == null) {
+            output.outPutStringLanding("something go wrong");
+            return null;
+        }
+
+        try {
+            while (result.next()) {
+                String ingName = result.getString("ing_name");
+                int x = result.getInt("count");
+                ingList.add(new IngridientsEvaluation(ingName,x));
+
+
+
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            output.outPutStringLanding(e.getMessage());
+        } finally {
+            db_connector.closeConnection();
+            return ingList;
+        }
     }
 
 
