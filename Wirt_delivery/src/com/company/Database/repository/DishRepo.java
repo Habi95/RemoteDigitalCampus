@@ -1,6 +1,7 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.Dishes;
+import com.company.Database.models.Menu;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
@@ -56,12 +57,7 @@ public class DishRepo implements Repository<Dishes> {
     @Override
     public Dishes findOne(int id) {
         Dishes resultDish = null;
-        String sql =  "SELECT DISTINCT menu.id AS menu , dishes.dish_name as name, typ_of_dish.name as art,  price.price as price_in_€ , dish_ingridients.dish_id FROM `price` \n" +
-                "                    INNER Join dish_ingridients ON price.dish_id = dish_ingridients.dish_id\n" +
-                "                    INNER Join dishes On dishes.id = dish_ingridients.dish_id\n" +
-                "                    INNER Join typ_of_dish On typ_of_dish.id = dishes.type\n" +
-                "                    INNER JOIN menu ON menu.dish_id = dish_ingridients.dish_id\n" +
-                "                    WHERE menu.id =" + id;
+        String sql =  "SELECT * FROM `dishes` WHERE id =" + id;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -70,13 +66,13 @@ public class DishRepo implements Repository<Dishes> {
 
         try {
             while (result.next()) {
-                int menuID = result.getInt("menu");
-                String dishName = result.getString("name");
-                String dishTyp = result.getString("art");
-                double price = result.getDouble("price_in_€");
+                int menuID = result.getInt("id");
+                String dishName = result.getString("dish_name");
+                String dishTyp = result.getString("type");
 
 
-                resultDish = new Dishes(dishName,menuID,dishTyp,price);
+
+                resultDish = new Dishes(dishName,menuID,dishTyp,0);
 
             }
         } catch (SQLException e) {
@@ -90,8 +86,78 @@ public class DishRepo implements Repository<Dishes> {
 
     @Override
     public void create(Dishes entity) {
-        String sql = "INSERT INTO `dishes`( `dish_name`, `type`) VALUES ([value-2],[value-3])";
+        String sql = "INSERT INTO `dishes`( `dish_name`, `type`) VALUES ('" + entity.getName() + "' , '" + entity.getDishTyp() + "')";
         db_connector.insert(sql);
     }
+
+   public Integer lastDishID () {
+       int dishID = 0;
+       String sql =  "SELECT id FROM `dishes` GROUP BY id DESC LIMIT 1";
+       ResultSet result = db_connector.fetchData(sql);
+       if (result == null) {
+           output.outPutStringLanding("something go wrong");
+           return null;
+       }
+
+       try {
+           while (result.next()) {
+                dishID = result.getInt("id");
+
+
+
+
+
+           }
+       } catch (SQLException e) {
+           e.printStackTrace();
+           output.outPutStringLanding(e.getMessage());
+       } finally {
+           db_connector.closeConnection();
+           return dishID;
+       }
+   }
+
+   public Dishes lastAdded () {
+       Dishes dishes = null;
+       String sql =  "SELECT dishes.id,dish_name,  typ_of_dish.name FROM `dishes`\n" +
+               "INNER Join typ_of_dish ON typ_of_dish.id = dishes.type\n" +
+               "ORDER BY id DESC LIMIT 1";
+       ResultSet result = db_connector.fetchData(sql);
+       if (result == null) {
+           output.outPutStringLanding("something go wrong");
+           return null;
+       }
+
+       try {
+           while (result.next()) {
+               int id = result.getInt("id");
+               String name = result.getString("dish_name");
+               String typ = result.getString("name");
+
+               dishes = new Dishes(name,id,typ,0);
+
+           }
+       } catch (SQLException e) {
+           e.printStackTrace();
+           output.outPutStringLanding(e.getMessage());
+       } finally {
+           db_connector.closeConnection();
+           return dishes;
+       }
+   }
+    public void addToMenu (Menu entity) {
+        String sql = "INSERT INTO `menu`(`wirt_id`, `dish_id`)" +
+                " VALUES " +
+                "(" + entity.getHostID() + "," + entity.getDishID() +")";
+        db_connector.insert(sql);
+    }
+
+    public void addPrice (Dishes entity) {
+        String sql = "INSERT INTO `price`(`dish_id`,`price`)" +
+                "  VALUES " +
+                "(" + entity.getDishId() + " , " + entity.getPrice() +")";
+        db_connector.insert(sql);
+    }
+
 
 }

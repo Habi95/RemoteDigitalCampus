@@ -1,7 +1,7 @@
 package com.company.controller;
 
 import com.company.Database.repository.DB_Connector;
-import com.company.Database.models.Dish;
+import com.company.Database.models.DishEvaluation;
 import com.company.Database.models.UserEvaluation;
 import com.company.Database.repository.DishRepo;
 import com.company.Database.repository.IngridientsRepo;
@@ -22,11 +22,12 @@ public class Evaluation    {
     DB_Connector db_connector;
     TerminalOutput output;
     DishRepo dishRepo;
+
     IngridientsRepo ingridientsRepo;
     UserRepo userRepo;
     ArrayList<UserEvaluation> users = new ArrayList<>();
-    ArrayList<Dish> mostOfOrderdDish = new ArrayList<>();
-    ArrayList<Dish> dishes = new ArrayList<>();
+    ArrayList<DishEvaluation> mostOfOrderdDish = new ArrayList<>();
+    ArrayList<DishEvaluation> dishes = new ArrayList<>();
     String filePath = "C:\\Users\\DCV\\Desktop\\HelloWorld\\RemoteDigitalCampus\\Zutatenliste_Wirt_delivery.txt";
     String filePath2 = "C:\\Users\\DCV\\Desktop\\HelloWorld\\RemoteDigitalCampus\\Order_Wirt_Delivery.txt";
     File ingridientsList = new File(filePath);
@@ -143,7 +144,7 @@ public class Evaluation    {
             while (result.next()) {
                 int x = result.getInt("x");
                 String dish = result.getString("dish_name");
-                Dish mostDish = new Dish(dish,x);
+                DishEvaluation mostDish = new DishEvaluation(dish,x);
                 mostOfOrderdDish.add(mostDish);
                 System.out.println("Das Gericht: " + dish + "wurde am meisten Bestellt.\nEs wurde " + x + " mal Bestellt");
             }
@@ -171,7 +172,7 @@ public class Evaluation    {
             while (result.next()) {
                 int x = result.getInt("x");
                 String dish = result.getString("dish_name");
-                Dish dishes1 = new Dish(dish,x);
+                DishEvaluation dishes1 = new DishEvaluation(dish,x);
                 dishes.add(dishes1);
                 System.out.println( x + "  -  " + dish);
             }

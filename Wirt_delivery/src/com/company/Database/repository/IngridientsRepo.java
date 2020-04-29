@@ -1,6 +1,8 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.Ingridients;
+import com.company.Database.repository.DB_Connector;
+import com.company.Database.repository.Repository;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;
@@ -106,7 +108,9 @@ public class IngridientsRepo implements Repository<Ingridients> {
 
     @Override
     public void create(Ingridients entity) {
-        String sql = " INSERT INTO `ingridients`(`ing_name`) VALUES ('" + entity.getName() + "')";
+        String sql = " INSERT INTO `dish_ingridients`(`dish_id`, `ing_id`) VALUES (" + entity.getId() + " , " + entity.getName() + ")";
         db_connector.insert(sql);
     }
+
+
 }

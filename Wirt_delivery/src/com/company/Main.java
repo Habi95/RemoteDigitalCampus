@@ -1,11 +1,10 @@
 package com.company;
 
-import com.company.Database.repository.DB_Connector;
-import com.company.Database.repository.DishRepo;
+
 import com.company.Database.repository.IngridientsRepo;
-import com.company.Database.repository.UserRepo;
-import com.company.controller.Restaurant;
+import com.company.Database.repository.*;
 import com.company.controller.Evaluation;
+import com.company.controller.Restaurant;
 import com.company.view.TerminalOutput;
 
 public class Main {
@@ -22,5 +21,6 @@ public class Main {
         castello.writeDish();
         //castello.ingriedientsList();
         //evaluation.writeList();
+        castello.writeDish();
     }
 }

@@ -1,7 +1,6 @@
 package com.company.Database.repository;
 
 import com.company.Database.models.User;
-import com.company.Database.models.UserEvaluation;
 import com.company.view.TerminalOutput;
 
 import java.sql.ResultSet;

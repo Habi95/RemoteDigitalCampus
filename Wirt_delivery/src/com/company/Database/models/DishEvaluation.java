@@ -1,11 +1,11 @@
 package com.company.Database.models;
 
-public class Dish {
+public class DishEvaluation {
 
     String dishName;
     int orderCount;
 
-    public Dish(String dishName, int orderCount) {
+    public DishEvaluation(String dishName, int orderCount) {
         this.dishName = dishName;
         this.orderCount = orderCount;
     }
