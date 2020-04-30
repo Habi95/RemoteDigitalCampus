@@ -1,7 +1,6 @@
 package com.company;
 
 import com.company.Database.models.Customer;
-import com.company.Database.models.Restaurant;
 import com.company.Database.repository.*;
 import com.company.controller.Delivery;
 import com.company.view.TerminalOutput;
@@ -22,14 +21,12 @@ public class Main {
         Delivery delivery = new Delivery("QuickFood",db_connector, userRepo);
         Customer customer = new Customer(db_connector,userRepo,myOutPut);
         FoodHandler foodHandler = new FoodHandler(dishRepo,ingridientsRepo);
-        Restaurant restaurant = new Restaurant();
-        foodHandler.createNewDishes(restaurant);
-        foodHandler.createNewIngridients(restaurant);
+        RestaurantRepo restaurant = new RestaurantRepo(db_connector,myOutPut);
         deliveryPlaceHandler.crateDeliveryPlaceList(delivery);
 
 
 
-        delivery.logIn(customer, restaurant, myOutPut);
+        delivery.logIn(customer, restaurant, myOutPut, foodHandler);
 
     }
 

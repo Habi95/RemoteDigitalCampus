@@ -62,6 +62,7 @@ public class GUI {
 
     public void writeDish() {
         this.restaurant.writeDish(hostUser.getId());
+        output.outPutStringLanding("");
         run();
     }
 

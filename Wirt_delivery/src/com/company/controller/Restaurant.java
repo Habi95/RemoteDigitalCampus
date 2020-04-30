@@ -101,7 +101,6 @@ public class Restaurant {
         dishes.setPrice(price);
         dishRepo.addPrice(dishes);
         output.outPutString("Danke für die Eingabe");
-        System.exit(0);
 
     }
 

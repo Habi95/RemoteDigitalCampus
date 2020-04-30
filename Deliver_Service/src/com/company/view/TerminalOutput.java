@@ -28,7 +28,6 @@ public class TerminalOutput {
 
      */
     public void printMenu(Restaurant restaurant, String choice) {
-
         switch (choice.toUpperCase()) {
             case "VS":
                 for (int j = 0; j < restaurant.dischesList.size(); j++) {
@@ -77,10 +76,11 @@ public class TerminalOutput {
                 }
                 break;
 
-                default: outPutStringLanding("try again");
+            default: outPutStringLanding("try again");
 
 
         }
+
     }
 
     public void printOrder (ArrayList<Dishes> orderDish, int orderCount) {
@@ -106,6 +106,12 @@ public class TerminalOutput {
         outPutString("ID - ORT - Preis in €");
         for (DeliveryPlaces deliveryPlace : deliveryPlaces) {
             outPutString(deliveryPlace.getId() + " - " + deliveryPlace.getPlace() + " - " + deliveryPlace.getPrice());
+        }
+    }
+
+    public void printRestaurants (ArrayList<Restaurant> restaurants) {
+        for (int i = 0; i < restaurants.size() ; i++) {
+           outPutString(i + 1 + ". " + restaurants.get(i).getName() + " , " + restaurants.get(i).getPlace() + " , " + restaurants.get(i).getType());
         }
     }
 }

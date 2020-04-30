@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class IngridientsRepo implements Repository<Ingridients> {
+public class IngridientsRepo  {
 
     private DB_Connector db_connector;
     private TerminalOutput output;
@@ -17,11 +17,11 @@ public class IngridientsRepo implements Repository<Ingridients> {
         this.output = output;
     }
 
-    @Override
-    public ArrayList<Ingridients> findAll() {
+
+    public ArrayList<Ingridients> findAll(int hostID) {
         ArrayList<Ingridients> ingridients = new ArrayList<>();
 
-        String sql =  "SELECT * FROM `ingridients";
+        String sql =  "SELECT * FROM `ingridients` WHERE ingridients.wirt_id =" + hostID ;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -47,7 +47,7 @@ public class IngridientsRepo implements Repository<Ingridients> {
         }
     }
 
-    @Override
+
     public Ingridients findOne(int id) {
         Ingridients ingridients = null;
         String sql =  "SELECT * FROM `ingridients` WHERE id =" + id;
@@ -104,7 +104,7 @@ public class IngridientsRepo implements Repository<Ingridients> {
         }
     }
 
-    @Override
+
     public void create(Ingridients entity) {
         String sql = " INSERT INTO `ingridients`(`ing_name`) VALUES ('" + entity.getName() + "')";
         db_connector.insert(sql);

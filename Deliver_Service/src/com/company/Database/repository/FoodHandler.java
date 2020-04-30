@@ -18,19 +18,19 @@ public class FoodHandler {
         this.ingridientsRepo = ingridientsRepo;
 
     }
-    public void createNewDishes(Restaurant restaurant) {
-       restaurant.dischesList =  dishRepo.findAll() ;
+    public void createNewDishes(Restaurant restaurant , int hostID) {
+       restaurant.dischesList =  dishRepo.findAll(hostID) ;
        dishesReceiveIng(restaurant.dischesList);
     }
 
-    public  void createNewIngridients(Restaurant restaurant) {
-        restaurant.ingridientsList = ingridientsRepo.findAll();
+    public  void createNewIngridients(Restaurant restaurant , int hostID) {
+        restaurant.ingridientsList = ingridientsRepo.findAll(hostID);
 
     }
 
     public  void dishesReceiveIng(ArrayList<Dishes> disheList) {
         for (int i = 0; i < disheList.size(); i++) {
-            disheList.get(i).dishIngridients = ingridientsRepo.findDishIng(i+1);
+            disheList.get(i).dishIngridients = ingridientsRepo.findDishIng(disheList.get(i).getDishId());
         }
     }
 

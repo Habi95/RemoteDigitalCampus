@@ -2,6 +2,8 @@ package com.company.controller;
 
 import com.company.Database.models.*;
 import com.company.Database.repository.DB_Connector;
+import com.company.Database.repository.FoodHandler;
+import com.company.Database.repository.RestaurantRepo;
 import com.company.Database.repository.UserRepo;
 import com.company.view.TerminalOutput;
 
@@ -26,12 +28,14 @@ public class Delivery {
     private int host;
     public User user;
     private Dishes orderDish;
+    private Restaurant restaurant;
+    public ArrayList<Restaurant> restaurants = new ArrayList<>();
     public ArrayList<DeliveryPlaces> deliveryPlaces = new ArrayList<>();
     public ArrayList<Dishes> orderDishes = new ArrayList<>();
     public ArrayList<Ingridients> addedIng = new ArrayList<>();
     public ArrayList<Ingridients> removeIng = new ArrayList<>();
 
-    public Delivery(String name ,DB_Connector db_connector,UserRepo userRepo) {
+    public Delivery(String name, DB_Connector db_connector, UserRepo userRepo) {
         this.name = name;
         this.db_connector = db_connector;
         this.userRepo = userRepo;
@@ -44,13 +48,13 @@ public class Delivery {
     */
 
     //ToDO get methode logIn changeable for other programms and the class Customer in a new project and handle like DB_Connector
-    public void logIn(Customer customer, Restaurant restaurant, TerminalOutput myOutPut) {
-        String title = "Willkommen bei "+this.name+"\nEinlogen (1) oder Account erstellen (2) ?";
+    public void logIn(Customer customer, RestaurantRepo restaurant, TerminalOutput myOutPut, FoodHandler foodHandler) {
+        String title = "Willkommen bei " + this.name + "\nEinlogen (1) oder Account erstellen (2) ?";
         myOutPut.outPutString(title);
         String choice = scanner.nextLine();
         if (choice.equalsIgnoreCase("2")) {
             customer.createUser();
-            logIn(customer, restaurant, myOutPut);  //go to createUser
+            logIn(customer, restaurant, myOutPut, foodHandler);  //go to createUser
         } else if (choice.equalsIgnoreCase("1")) {  //login
             String email = "Email eingeben";
             myOutPut.outPutStringLanding(email);
@@ -76,18 +80,18 @@ public class Delivery {
                     myOutPut.outPutStringLanding(livingPlace);
                     String place = scanner.nextLine();
                     customer.custAccInfo(userID, userEMail, place);
-                    logIn(customer, restaurant, myOutPut);
+                    logIn(customer, restaurant, myOutPut, foodHandler);
                 }
-                logIn(customer, restaurant, myOutPut);
+                logIn(customer, restaurant, myOutPut, foodHandler);
             } else {
                 user = userRepo.findWithEmail(userEmail);   //safe user + check deliveryPlace + get the last ordernumber
                 if (isDelivery()) {                 // to get the new number for the new order
-                   String loggedIn = "loged in";
-                   myOutPut.outPutStringLanding(loggedIn);
-                    lastOrderNumber( myOutPut);
+                    String loggedIn = "loged in";
+                    myOutPut.outPutStringLanding(loggedIn);
+                    lastOrderNumber(myOutPut);
                     this.newOrderNR++;
-                    printDeliverPlaces(myOutPut);
-                    whichMenu(restaurant, myOutPut);
+                    choiceRestaurant(myOutPut, foodHandler, restaurant);
+
                 } else {
                     String sorry = "Wir liefern nicht zu Ihrem Wohnort SORRY";
                     myOutPut.outPutStringLanding(sorry);  // ToDO maby new funktion to get the food by the customer self
@@ -95,9 +99,9 @@ public class Delivery {
                 }
             }
 
-        }  else{
+        } else {
             System.out.println("Diese eingabe Kenne ich nicht");
-            logIn(customer, restaurant, myOutPut);
+            logIn(customer, restaurant, myOutPut, foodHandler);
         }
     }
 
@@ -112,36 +116,47 @@ public class Delivery {
         return isDelivery;
     }
 
-    public void choiceRestaurant (Restaurant restaurant, TerminalOutput output) {
+    public void choiceRestaurant(TerminalOutput output, FoodHandler foodHandler, RestaurantRepo restaurantRepo) {
+        restaurants = restaurantRepo.findAll();
+        output.printRestaurants(restaurants);
         output.outPutStringLanding("In welchem Restaurant wollen Sie bestellen?");
+        int choice = scanner.nextInt();
+        restaurant = restaurantRepo.findOne(choice);
+        foodHandler.createNewDishes(restaurant, restaurant.getId());
+        foodHandler.createNewIngridients(restaurant, restaurant.getId());
+        this.host = restaurant.getId();
+        printDeliverPlaces(output);
+        whichMenu(output);
+
+
     }
 
-    public void whichMenu(Restaurant restaurant, TerminalOutput output) {
+    public void whichMenu( TerminalOutput output) {
         String head = "\t\t\t * * * Unsere Speisekarte * * * \n" +
                 "Willst du Vorspeisen (VS) - Hauptspeisen (HS)  - ALLE sehen (all)";
         output.outPutStringLanding(head);
-        String choice = scanner.nextLine();
+        String choice = scanner.next();
         if (choice.equalsIgnoreCase("VS")) {
             headOfDish(output);
-            output.printMenu(restaurant,choice);
-            toOrder(restaurant, output);
+            output.printMenu(restaurant, choice);
+            toOrder(output);
         } else if (choice.equalsIgnoreCase("HS")) {
             headOfDish(output);
-            output.printMenu(restaurant,choice);
-            toOrder(restaurant, output);
+            output.printMenu(restaurant, choice);
+            toOrder(output);
         } else if (choice.equalsIgnoreCase("all")) {
             headOfDish(output);
-            output.printMenu(restaurant,choice);
-            toOrder(restaurant, output);
+            output.printMenu(restaurant, choice);
+            toOrder(output);
         } else {
-            whichMenu(restaurant, output);
+            whichMenu( output);
         }
     }
 
-    public void toOrder(Restaurant restaurant, TerminalOutput output) {
+    public void toOrder(TerminalOutput output) {
         output.outPutStringLanding("Was möchtest du bestellen? ID bitte eingeben");
         this.dishID = scanner.nextInt();
-        createOrderDish(restaurant,output);
+        createOrderDish(restaurant, output);
         output.outPutStringLanding("Richtige Auswahl? (J) JA / (N) NEIN ");
         String bug = scanner.nextLine();
         String tempSTring = scanner.nextLine();
@@ -149,23 +164,23 @@ public class Delivery {
             this.orderDish = null;
             this.orderDishes.remove(this.orderCounter);
             this.dishID = 0;
-            whichMenu(restaurant,output);
-           // toOrder(restaurant, output);
+            whichMenu(output);
+            // toOrder(restaurant, output);
         } else if (tempSTring.equalsIgnoreCase("j")) {
             output.outPutString("Möchtest du was verändern? (J) JA / (N) NEIN \n Jede zusätzliche Zutat € 0,75");
             String tempString = scanner.nextLine();
             if (tempString.equalsIgnoreCase("j")) {
-                changeIngridients(restaurant,output);
-                wantMore(restaurant, output);
+                changeIngridients(restaurant, output);
+                wantMore(output);
 
             } else if (tempString.equalsIgnoreCase("n")) {
                 printOrderDish(output);
-                wantMore(restaurant, output);
+                wantMore( output);
             }
         }
     }
 
-    public void wantMore(Restaurant restaurant, TerminalOutput output) {
+    public void wantMore(TerminalOutput output) {
         int freeDelivery = 15;
         if (this.bill >= freeDelivery) {
             output.outPutString("Ihr momentaner Bestellwert: " + this.bill + "\nWir Liefern Gratis !");
@@ -183,7 +198,7 @@ public class Delivery {
         String tempString = scanner.next();
         if (tempString.equalsIgnoreCase("J")) {
             this.orderCounter++;
-            whichMenu(restaurant, output);
+            whichMenu( output);
         } else if (tempString.equalsIgnoreCase("N")) {
             if (this.bill >= freeDelivery) {
                 this.isFreeDelivery = 1;
@@ -198,7 +213,7 @@ public class Delivery {
     public void goTPay(TerminalOutput output) {
         output.outPutStringLanding("Ihre Bestellung zur 'adresse' " + user.getPlace());
         orderDishes.forEach(dishes -> output.outPutString(dishes.getName() + " - " + dishes.getPrice()));
-       output.outPutString("Ihre Rechnung: " + this.bill);
+        output.outPutString("Ihre Rechnung: " + this.bill);
         insertOrder();
     }
 
@@ -297,11 +312,11 @@ WHERE dish_ingridients.dish_id = 20  = dishID
 
 wirt sucht
     */
-                    String sql = "INSERT INTO `user_order`" +
-                            "(`id`, `user_id`, `total_price`, `wirt_id`) " +
-                            "VALUES" +
-                            " ('" + this.newOrderNR + "' , '" + user.getUserID() + "' , '" + this.bill + "' , '" + userRepo.whichHost(orderDish.getDishId()) + "')";
-                    db_connector.insert(sql);
+        String sql = "INSERT INTO `user_order`" +
+                "(`id`, `user_id`, `total_price`, `wirt_id`) " +
+                "VALUES" +
+                " ('" + this.newOrderNR + "' , '" + user.getUserID() + "' , '" + this.bill + "' , '" + this.host + "')";
+        db_connector.insert(sql);
 
         for (Dishes dish : orderDishes) {
             String sql2 = "INSERT INTO `order_detail`" +
@@ -311,36 +326,36 @@ wirt sucht
                     + dish.getDishId() + "' , '" + this.isFreeDelivery + "' )";
             db_connector.insert(sql2);
         }
-                insertUserIngWish();
+        insertUserIngWish();
     }
 
     public void lastOrderNumber(TerminalOutput output) {
 
-            String query = "SELECT * FROM `user_order` ORDER by user_order.id DESC LIMIT 1";
-            ResultSet rs = db_connector.fetchData(query);
-            if (rs == null) {
-                output.outPutStringLanding("rs == null, problem check query or conn");
-                return;
+        String query = "SELECT * FROM `user_order` ORDER by user_order.id DESC LIMIT 1";
+        ResultSet rs = db_connector.fetchData(query);
+        if (rs == null) {
+            output.outPutStringLanding("rs == null, problem check query or conn");
+            return;
+        }
+        try {
+            while (rs.next()) {
+                this.newOrderNR = rs.getInt("id");
             }
-            try {
-                while (rs.next()) {
-                    this.newOrderNR = rs.getInt("id");
-                }
-            } catch (SQLException e) {
-                throw new Error("Problem ", e);
-            } finally {
-               db_connector.closeConnection();
-            }
+        } catch (SQLException e) {
+            throw new Error("Problem ", e);
+        } finally {
+            db_connector.closeConnection();
+        }
     }
 
     public void printOrderDish(TerminalOutput output) {
-        output.printOrder(orderDishes , this.orderCounter);
+        output.printOrder(orderDishes, this.orderCounter);
         this.bill += orderDishes.get(orderCounter).getPrice();
         output.outPutStringLanding("Ihr waren wert: " + this.bill);
     }
 
     public void headOfDish(TerminalOutput output) {
-       output.outPutString("ID  -  Name  -  Typ - Preis in €");
+        output.outPutString("ID  -  Name  -  Typ - Preis in €");
     }
 
     public void printDeliverPlaces(TerminalOutput output) {
