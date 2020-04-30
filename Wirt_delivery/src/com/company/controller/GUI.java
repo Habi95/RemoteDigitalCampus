@@ -9,14 +9,14 @@ import com.company.view.TerminalOutput;
 import java.util.Scanner;
 
 public class GUI {
-  private String name;
-  private int logInCounter = 0;
-  private Restaurant restaurant;
-  private Evaluation evaluation;
-  private TerminalOutput output;
-  private Customer customer;
-  private Scanner scanner = new Scanner(System.in);
-  private HostUser hostUser;
+    private String name;
+    private int logInCounter = 0;
+    private Restaurant restaurant;
+    private Evaluation evaluation;
+    private TerminalOutput output;
+    private Customer customer;
+    private Scanner scanner = new Scanner(System.in);
+    private HostUser hostUser;
 
 
     public GUI(String name, Restaurant restaurant, Evaluation evaluation, TerminalOutput output, Customer customer) {
@@ -45,7 +45,8 @@ public class GUI {
                     }
                     break;
                 case "2":
-                    restaurant.createIng(hostUser.getId()); break;
+                    restaurant.createIng(hostUser.getId());
+                    break;
 
                 case "3":
                     evalutionChoice();
@@ -103,7 +104,7 @@ public class GUI {
     }
 
     public void logIn() {
-        String title = "Willkommen bei "+this.name+"\nEinlogen (1) oder Account erstellen (2) ?";
+        String title = "Willkommen bei " + this.name + "\nEinlogen (1) oder Account erstellen (2) ?";
         output.outPutString(title);
         String choice = scanner.nextLine();
         if (choice.equalsIgnoreCase("2")) {
@@ -140,10 +141,10 @@ public class GUI {
             } else {
                 hostUser = customer.hostUser(userEmail);
                 output.outPutStringLanding("logged in");
-               run();
+                run();
             }
 
-        }  else{
+        } else {
             System.out.println("Diese eingabe Kenne ich nicht");
             logIn();
         }

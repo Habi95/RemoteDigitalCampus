@@ -35,9 +35,9 @@ public class RestaurantRepo implements Repository<HostUser> {
                 String email = result.getString("email");
                 String password = result.getString("password");
                 String place = result.getString("place");
+                String type = result.getString("typ");
 
-
-                users.add(new HostUser(ID , name, email , password ,place));
+                users.add(new HostUser(ID , name, email , password ,place,type));
 
             }
         } catch (SQLException e) {
@@ -65,9 +65,10 @@ public class RestaurantRepo implements Repository<HostUser> {
                 String email = result.getString("email");
                 String password = result.getString("password");
                 String place = result.getString("place");
+                String type = result.getString("typ");
 
 
-                resultUser = new HostUser(ID , name, email , password ,place);
+                resultUser = new HostUser(ID , name, email , password ,place , type);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,8 +81,8 @@ public class RestaurantRepo implements Repository<HostUser> {
 
     @Override
     public void create(HostUser entity) {
-        String sql = "INSERT INTO `wirt`( `name`, `email`, `password`, `place`) VALUES ('" + entity.getName() + "' , '" + entity.getEmail() + "' , '" + entity.getPassword() + "' , '" +
-                entity.getPlace() + "')";
+        String sql = "INSERT INTO `wirt`( `name`, `email`, `password`, `place`, typ) VALUES ('" + entity.getName() + "' , '" + entity.getEmail() + "' , '" + entity.getPassword() + "' , '" +
+                entity.getPlace() + "' , '" + entity.getType() + "')";
         db_connector.insert(sql);
     }
 
@@ -101,9 +102,9 @@ public class RestaurantRepo implements Repository<HostUser> {
                 String email1 = result.getString("email");
                 String password = result.getString("password");
                 String place = result.getString("place");
+                String type = result.getString("typ");
 
-
-                resultUser = new HostUser(ID , name, email1 , password ,place);
+                resultUser = new HostUser(ID , name, email1 , password ,place,type);
 
             }
         } catch (SQLException e) {

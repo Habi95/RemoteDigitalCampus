@@ -35,7 +35,9 @@ public class Customer {
             String password = scanner.nextLine();
             output.outPutString("ORT");
             String place = scanner.nextLine();
-            userRepo.create(new HostUser(userRepo.lastUserId() + 1, name, email, password, place));
+            output.outPutString("Was für eine art Restaurant sind Sie?");
+            String typ = scanner.nextLine();
+            userRepo.create(new HostUser(userRepo.lastUserId() + 1, name, email, password, place,typ));
             output.outPutString("Account wurde erstellt\nIhre Daten: \n");
             accInfo(userRepo.lastUserId());
 
