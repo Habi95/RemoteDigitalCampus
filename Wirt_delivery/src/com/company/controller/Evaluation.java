@@ -54,39 +54,40 @@ public class Evaluation    {
         this.writer = writer;
     }
 
-    public void howMuchOrder ()
+    public void howMuchOrder ( int hostID)
     {
-        output.outPutStringLanding("Bis jetzt wurden gesamt " + userRepo.howMuchOrdering()
+        output.outPutStringLanding("Bis jetzt wurden gesamt " + userRepo.howMuchOrdering( hostID)
                                     + " Bestellungen aufgegeben");
     }
 
-    public void perCustomOrder () {
-        users = userRepo.orderPerCustomer();
+    public void perCustomOrder ( int hostID) {
+        users = userRepo.orderPerCustomer(hostID);
         output.evaluationPerCustomer(users);
     }
 
-    public void perTown () {
-        town = userRepo.orderPerTown();
+    public void perTown ( int hostID) {
+        town = userRepo.orderPerTown(hostID);
         output.evaluationPerTown(town);
     }
 
-    public void mostOfDish () {
-        output.outPutString("Das Gericht: " + dishRepo.mostOf().getDishName() + "wurde am meisten Bestellt.\nEs wurde " +
-                                    dishRepo.mostOf().getOrderCount() + " mal Bestellt");
+    public void mostOfDish (int hostID) {
+        output.outPutString("Das Gericht: " + dishRepo.mostOf(hostID).getDishName() + " " +
+                "wurde am meisten Bestellt.\nEs wurde " +
+                                    dishRepo.mostOf(hostID).getOrderCount() + " mal Bestellt");
     }
 
-    public void dishSorted () {
-        dishes = dishRepo.dishGroupByPopular();
+    public void dishSorted (int hostID) {
+        dishes = dishRepo.dishGroupByPopular(hostID);
         output.printSortedDish(dishes);
     }
 
-    public void writeList () {
-        ingridientsEvaluations = ingridientsRepo.ingridientsEvaluations();
+    public void writeList (int hostID) {
+        ingridientsEvaluations = ingridientsRepo.ingridientsEvaluations(hostID);
         writer.writeIngList(listWriter,ingridientsEvaluations);
     }
 
-    public void writeBill () {
-        billEvaluations = userRepo.bill();
+    public void writeBill (int hostID) {
+        billEvaluations = userRepo.bill(hostID);
         writer.writeBill(billWriter,billEvaluations);
     }
 

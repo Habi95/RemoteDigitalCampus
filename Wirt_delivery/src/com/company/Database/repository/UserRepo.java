@@ -155,8 +155,9 @@ public class UserRepo implements Repository<User> {
         }
     }
 
-    public Integer howMuchOrdering () {   int x = 0;
-        String sql =  "SELECT count(user_order.id) FROM user_order";
+    public Integer howMuchOrdering (int hostID) {
+        int x = 0;
+        String sql =  "SELECT count(user_order.id) FROM user_order WHERE user_order.wirt_id =" + hostID ;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -175,12 +176,13 @@ public class UserRepo implements Repository<User> {
         }
     }
 
-    public ArrayList<UserEvaluation> orderPerCustomer () {
+    public ArrayList<UserEvaluation> orderPerCustomer (int hostID) {
         ArrayList<UserEvaluation> users = new ArrayList<>();
         String sql =  "SELECT count(order_detail.order_id), user.email FROM `order_detail`\n" +
-                "                INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
-                "                INNER JOIN user ON user.user_id = user_order.user_id\n" +
-                "                GROUP BY user.email";
+                "INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
+                "INNER JOIN user ON user.user_id = user_order.user_id\n" +
+                "WHERE user_order.wirt_id =" + hostID +
+                " GROUP BY user.email";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -206,12 +208,13 @@ public class UserRepo implements Repository<User> {
         }
     }
 
-    public ArrayList<TownEvaluation> orderPerTown () {
+    public ArrayList<TownEvaluation> orderPerTown (int hostID) {
         ArrayList<TownEvaluation> town = new ArrayList<>();
         String sql = "SELECT count(order_detail.order_id),user.place FROM `order_detail`\n" +
                 "INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
                 "INNER JOIN user ON user.user_id = user_order.user_id\n" +
-                "GROUP BY user.place";
+                "WHERE user_order.wirt_id ="+ hostID +
+                " GROUP BY user.place";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -237,9 +240,9 @@ public class UserRepo implements Repository<User> {
         }
     }
 
-    public ArrayList<BillEvaluation> bill () {
+    public ArrayList<BillEvaluation> bill (int hostID) {
         ArrayList<BillEvaluation> billList = new ArrayList<>();
-        String sql = "SELECT `id`, `user_id`, `total_price`, `time` FROM `user_order`";
+        String sql = "SELECT `id`, `user_id`, `total_price`, `time` FROM `user_order` WHERE user_order.wirt_id =" + hostID;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");

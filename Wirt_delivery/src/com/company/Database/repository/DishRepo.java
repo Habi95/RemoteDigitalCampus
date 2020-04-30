@@ -155,12 +155,14 @@ public class DishRepo implements Repository<Dishes> {
         db_connector.insert(sql);
     }
 
-    public DishEvaluation mostOf ()  {
+    public DishEvaluation mostOf (int hostID)  {
         DishEvaluation dishes = null;
         String sql = "SELECT COUNT(order_detail.dish_order_id) as 'x'  , dishes.dish_name  FROM `order_detail`\n" +
                 "INNER JOIN dishes ON dishes.id = order_detail.dish_order_id\n" +
-                "GROUP BY dish_order_id\n" +
-                "ORDER BY `x`  DESC\n" +
+                "INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
+                "WHERE user_order.wirt_id =" + hostID +
+                " GROUP BY dish_order_id\n" +
+                " ORDER BY `x`  DESC\n" +
                 "LIMIT 1";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
@@ -185,11 +187,13 @@ public class DishRepo implements Repository<Dishes> {
         }
     }
 
-    public ArrayList<DishEvaluation> dishGroupByPopular () {
+    public ArrayList<DishEvaluation> dishGroupByPopular (int hostID) {
         ArrayList<DishEvaluation> dishes = new ArrayList<>();
         String sql = "SELECT COUNT(order_detail.dish_order_id) as 'x'  , dishes.dish_name  FROM `order_detail`\n" +
                 "INNER JOIN dishes ON dishes.id = order_detail.dish_order_id\n" +
-                "GROUP BY dish_order_id\n" +
+                "INNER JOIN user_order ON user_order.id = order_detail.order_id\n" +
+                "WHERE user_order.wirt_id =" + hostID +
+                " GROUP BY dish_order_id\n" +
                 "ORDER BY `x`  DESC";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {

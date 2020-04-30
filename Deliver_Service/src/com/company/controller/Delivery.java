@@ -23,6 +23,7 @@ public class Delivery {
     private int orderDetailID;
     private double userDeliveryPrice;
     private double bill;
+    private int host;
     public User user;
     private Dishes orderDish;
     public ArrayList<DeliveryPlaces> deliveryPlaces = new ArrayList<>();
@@ -109,6 +110,10 @@ public class Delivery {
             }
         }
         return isDelivery;
+    }
+
+    public void choiceRestaurant (Restaurant restaurant, TerminalOutput output) {
+        output.outPutStringLanding("In welchem Restaurant wollen Sie bestellen?");
     }
 
     public void whichMenu(Restaurant restaurant, TerminalOutput output) {
@@ -284,11 +289,20 @@ public class Delivery {
     }
 
     public void insertOrder() {
-                String sql = "INSERT INTO `user_order`" +
-                        "(`id`, `user_id`, `total_price`) " +
-                        "VALUES" +
-                        " ('" + this.newOrderNR + "' , '" + user.getUserID() + "' , '" + this.bill + "')";
-               db_connector.insert(sql);
+        /*
+
+        SELECT DISTINCT menu.wirt_id FROM `dish_ingridients`
+INNER JOIN menu ON menu.dish_id = dish_ingridients.dish_id
+WHERE dish_ingridients.dish_id = 20  = dishID
+
+wirt sucht
+    */
+                    String sql = "INSERT INTO `user_order`" +
+                            "(`id`, `user_id`, `total_price`, `wirt_id`) " +
+                            "VALUES" +
+                            " ('" + this.newOrderNR + "' , '" + user.getUserID() + "' , '" + this.bill + "' , '" + userRepo.whichHost(orderDish.getDishId()) + "')";
+                    db_connector.insert(sql);
+
         for (Dishes dish : orderDishes) {
             String sql2 = "INSERT INTO `order_detail`" +
                     "(`order_id`, `dish_order_id`, `price_order_dish_id`, `is_free_delivery`)"

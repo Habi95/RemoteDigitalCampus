@@ -1,4 +1,5 @@
 package com.company.controller;
+
 import com.company.Database.models.Dishes;
 import com.company.Database.models.Ingridients;
 import com.company.Database.models.Menu;
@@ -6,6 +7,7 @@ import com.company.Database.repository.DB_Connector;
 import com.company.Database.repository.DishRepo;
 import com.company.Database.repository.IngridientsRepo;
 import com.company.view.TerminalOutput;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,7 +17,7 @@ public class Restaurant {
     TerminalOutput output;
     DishRepo dishRepo;
     IngridientsRepo ingridientsRepo;
-    int host = 1;
+    int host;
     String vorspeise = "1";
     String hauptspeise = "2";
     ArrayList<Ingridients> ingridientsList = new ArrayList<>();
@@ -28,7 +30,8 @@ public class Restaurant {
         this.ingridientsRepo = ingridientsRepo;
     }
 
-    public void writeDish() {
+    public void writeDish(int hostId) {
+        this.host = hostId;
         output.outPutStringLanding("Wollen Sie eine Hauptspeise (HS) oder eine Vorspeise (VS) erstellen?");
         String temp1 = scanner.nextLine();
         if (temp1.equalsIgnoreCase("VS")) {
@@ -36,8 +39,6 @@ public class Restaurant {
             String temp = scanner.nextLine();
             dishRepo.create(new Dishes(temp, dishRepo.lastDishID() + 1, vorspeise, 0));
             addIngridient();
-
-
         }
         if (temp1.equalsIgnoreCase("HS")) {
             output.outPutString("Wie heißt die Hauptspeise?");
@@ -46,7 +47,7 @@ public class Restaurant {
             addIngridient();
         } else {
             output.outPutString("Diese Eingabe war nicht korrekt");
-            writeDish();
+            writeDish(hostId);
         }
     }
 
@@ -57,7 +58,6 @@ public class Restaurant {
             lastAddedDish();
             ingOfDish();
             ingriedientsList();
-
             output.outPutString("Wollen Sie noch eine Zutata hinzufügen? J / N");
             String bug1 = scanner.nextLine();
             String temp1 = scanner.nextLine();
@@ -65,14 +65,12 @@ public class Restaurant {
                 output.outPutString("bitte in Zutaten ID eingeben");
                 String tempIng = scanner.nextLine();
                 ingridients = new Ingridients(dishRepo.lastDishID(), tempIng);
-                ingridientsRepo.create(ingridients);
+                ingridientsRepo.dishGetIng(ingridients);
             } else if (temp1.equalsIgnoreCase("N")) {
                 run = false;
                 output.outPutString("Danke für die Eingabe");
                 addToMenu();
                 addPrice();
-
-
             }
         }
     }
@@ -88,7 +86,7 @@ public class Restaurant {
     }
 
     public void ingriedientsList() {
-        ingridientsList = ingridientsRepo.findAll();
+        ingridientsList = ingridientsRepo.findAll(this.host);
         output.printIngriedients(ingridientsList);
     }
 
@@ -105,5 +103,12 @@ public class Restaurant {
         output.outPutString("Danke für die Eingabe");
         System.exit(0);
 
+    }
+
+    public void createIng (int hostID) {
+        output.outPutString("Wie heißt die Zutat?");
+        String name = scanner.nextLine();
+        ingridientsRepo.createIng( new Ingridients(hostID , name));
+        output.outPutString("Wurde Erfolgreich hinzugefügt");
     }
 }

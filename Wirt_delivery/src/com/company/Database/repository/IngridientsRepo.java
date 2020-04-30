@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class IngridientsRepo implements Repository<Ingridients> {
+public class IngridientsRepo  {
 
     private DB_Connector db_connector;
     private TerminalOutput output;
@@ -18,11 +18,10 @@ public class IngridientsRepo implements Repository<Ingridients> {
         this.output = output;
     }
 
-    @Override
-    public ArrayList<Ingridients> findAll() {
+    public ArrayList<Ingridients> findAll(int hostID) {
         ArrayList<Ingridients> ingridients = new ArrayList<>();
 
-        String sql =  "SELECT * FROM `ingridients";
+        String sql =  "SELECT * FROM `ingridients` WHERE wirt_id =" + hostID;
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");
@@ -48,7 +47,7 @@ public class IngridientsRepo implements Repository<Ingridients> {
         }
     }
 
-    @Override
+
     public Ingridients findOne(int id) {
         Ingridients ingridients = null;
         String sql =  "SELECT * FROM `ingridients` WHERE id =" + id;
@@ -105,24 +104,30 @@ public class IngridientsRepo implements Repository<Ingridients> {
         }
     }
 
-    @Override
-    public void create(Ingridients entity) {
+    public void dishGetIng(Ingridients entity) {
         String sql = " INSERT INTO `dish_ingridients`(`dish_id`, `ing_id`) VALUES (" + entity.getId() + " , " + entity.getName() + ")";
         db_connector.insert(sql);
     }
+
+    public void createIng(Ingridients entity) {
+        String sql = "INSERT INTO `ingridients`(`ing_name`, `wirt_id`) VALUES ('" + entity.getName() + "' , '" + entity.getId() + "')";
+        db_connector.insert(sql);
+    }
     
-    public ArrayList<IngridientsEvaluation> ingridientsEvaluations () {
+    public ArrayList<IngridientsEvaluation> ingridientsEvaluations (int hostID) {
         ArrayList<IngridientsEvaluation> ingList = new ArrayList<>();
         String sql = "select ingridients.ing_name, count(*) + (select count(*) from order_detail_ingriedients\n" +
-                "INNER JOIN ingridients ON ingridients.id = order_detail_ingriedients.ing_order_id\n" +
+                "INNER JOIN ingridients ON ingridients.id = order_detail_ingriedients.ing_order_id                                         \n" +
                 "WHERE order_detail_ingriedients.added_ing = 1\n" +
-                "AND ingridients.ing_name = ing_name) - (select count(*) from order_detail_ingriedients\n" +
+                "AND ingridients.ing_name = ing_name AND ingridients.wirt_id =" + hostID + " ) - (select count(*) from order_detail_ingriedients\n" +
                 "INNER JOIN ingridients ON ingridients.id = order_detail_ingriedients.ing_order_id\n" +
                 "WHERE order_detail_ingriedients.removed_ing = 1\n" +
-                "AND ingridients.ing_name = ing_name) as 'count'  from order_detail\n" +
+                "AND ingridients.ing_name = ing_name AND ingridients.wirt_id = "+ hostID + " ) as 'count'  from order_detail\n" +
                 "INNER JOIN dish_ingridients ON dish_ingridients.dish_id = order_detail.dish_order_id\n" +
                 "INNER JOIN ingridients ON ingridients.id = dish_ingridients.ing_id\n" +
-                "group by ingridients.ing_name";
+                "INNER JOIN user_order On user_order.id = order_detail.order_id\n" +
+                "WHERE user_order.wirt_id =" + hostID  +
+                " group by ingridients.ing_name";
         ResultSet result = db_connector.fetchData(sql);
         if (result == null) {
             output.outPutStringLanding("something go wrong");

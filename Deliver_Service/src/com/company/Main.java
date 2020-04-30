@@ -8,9 +8,9 @@ import com.company.view.TerminalOutput;
 
 public class Main {
 //TODO Customer
-    //TODO Wirt Programm refectoren
+    //TODO Restaurant spezifizieren
     public static void main(String[] args) {
-        final String url = "jdbc:mysql://localhost:3306/lieferservice?user=root";
+        final String url = "jdbc:mysql://localhost:3306/lieferservicetest?user=root";
         DB_Connector db_connector = new DB_Connector(url);
         TerminalOutput myOutPut = new TerminalOutput();
 

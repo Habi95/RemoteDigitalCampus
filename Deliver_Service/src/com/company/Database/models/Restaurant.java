@@ -3,6 +3,16 @@ package com.company.Database.models;
 import java.util.ArrayList;
 
 public class Restaurant {
+//
+//    String name;
+//    String ort;
+//    int hostID;
+//
+//    public Restaurant(String name, String ort, int hostID) {
+//        this.name = name;
+//        this.ort = ort;
+//        this.hostID = hostID;
+//    }
 
     public ArrayList<Dishes> dischesList = new ArrayList<>();
     public ArrayList<Ingridients> ingridientsList = new ArrayList<>();
