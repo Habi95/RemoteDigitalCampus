@@ -1,34 +1,100 @@
 h1 {
     color: whitesmoke;
     font-size: 60px;
+    text-align: center;
 }
+
 h1.title {
     color: darkgoldenrod;
     font-size: 60px;
+    text-align: center;
 }
 
-p.file2 {
-    color: black;
-    font-size: 25px;
+.my-form {
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
-p,li.list1 {
-   color:whitesmoke;
-   font-size: 30px; 
+embed {
+    
 }
+
+
+.my-Tform {
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid whitesmoke;
+}
+
+.my-table {
+    padding-left: 43%;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+ li.list1 {
+    color: whitesmoke;
+    display: block;
+    width: 250px;
+    text-decoration: none;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.navigation {}
+
+ul {
+    list-style-type: none;
+}
+
+ul.nav {
+    border: 1px solid whitesmoke;
+}
+.vid {
+    width: 33%;
+    padding-left: 10%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.blog {
+    width: 100%;
+}
+
 img {
     height: 35px;
     width: 35px
 }
+
 img.myPic {
     height: 100px;
     width: 100px
 }
 
-html.about {
-    background-color: brown;
+img.granni {
+    height: 100px;
+    width: 150px;
 }
+
 html.homepage {
-    background-image: url('asset/background.jpg');
-    
+    background-image: url('asset/img13.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+html.dcv_back {
+    background-image: url('asset/maxresdefault.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

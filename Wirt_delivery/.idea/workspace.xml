@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="250e330d-cfc9-401b-bab6-7c70d9fda0b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../DataBaseConnector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataBaseConnector/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Datenbank_Zuweisung/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HTML/AboutMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/../HTML/AboutMe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HTML/Startseite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HTML/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../HTML/myStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,9 +235,10 @@
       <screen x="1920" y="-371" width="2560" height="1400" />
     </state>
     <state x="3754" y="389" width="507" height="208" key="dock-window-10/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1588253586283" />
-    <state x="3683" y="559" width="507" height="208" key="dock-window-11" timestamp="1588253891682">
-      <screen x="1920" y="-371" width="2560" height="1400" />
+    <state x="1058" y="558" width="406" height="166" key="dock-window-11" timestamp="1588850353946">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="1058" y="558" width="406" height="166" key="dock-window-11/0.0.1536.824/1920.-371.2560.1400@0.0.1536.824" timestamp="1588850353946" />
     <state x="3683" y="559" width="507" height="208" key="dock-window-11/0.0.1536.824/1920.-371.2560.1400@1920.-371.2560.1400" timestamp="1588253891682" />
     <state x="3790" y="650" width="507" height="338" key="dock-window-12" timestamp="1588076447007">
       <screen x="1920" y="-371" width="2560" height="1400" />
