@@ -4,6 +4,8 @@ h1 {
     text-align: center;
 }
 
+
+
 h1.title {
     color: darkgoldenrod;
     font-size: 60px;
@@ -14,10 +16,6 @@ h1.title {
     color: white;
     font-size: 20px;
     text-align: center;
-}
-
-embed {
-    
 }
 
 
@@ -37,6 +35,17 @@ embed {
 a {
     color: white;
     font-size: 20px;
+}
+
+.impressum {
+    position: absolute;
+    bottom: 30px;
+   padding-left: 48%;
+}
+
+.blackback {
+
+    background-color: black;
 }
 
  li.list1 {
